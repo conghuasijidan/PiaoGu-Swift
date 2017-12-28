@@ -18,9 +18,9 @@
 		F42B974D1FF37F9A00EB765B /* TicketAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B974C1FF37F9A00EB765B /* TicketAppUITests.swift */; };
 		F42B975F1FF380BC00EB765B /* YKTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B975E1FF380BC00EB765B /* YKTabBarController.swift */; };
 		F42B97611FF380E900EB765B /* YKNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B97601FF380E900EB765B /* YKNavigationViewController.swift */; };
-		F42B97661FF4931100EB765B /* YKHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B97651FF4931100EB765B /* YKHomeViewController.swift */; };
 		F42B97681FF4932400EB765B /* YKMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B97671FF4932400EB765B /* YKMarketViewController.swift */; };
 		F42B976A1FF4932F00EB765B /* YKMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B97691FF4932F00EB765B /* YKMeViewController.swift */; };
+		F4C252431FF4E86B008485D2 /* YKHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252421FF4E86B008485D2 /* YKHomeViewController.swift */; };
 		F8B0110DC1B10CCFCB5232F1 /* Pods_TicketAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF7D102718AA4A2E55AB7C6 /* Pods_TicketAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,9 +66,9 @@
 		F42B974E1FF37F9A00EB765B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F42B975E1FF380BC00EB765B /* YKTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKTabBarController.swift; sourceTree = "<group>"; };
 		F42B97601FF380E900EB765B /* YKNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKNavigationViewController.swift; sourceTree = "<group>"; };
-		F42B97651FF4931100EB765B /* YKHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKHomeViewController.swift; sourceTree = "<group>"; };
 		F42B97671FF4932400EB765B /* YKMarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMarketViewController.swift; sourceTree = "<group>"; };
 		F42B97691FF4932F00EB765B /* YKMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMeViewController.swift; sourceTree = "<group>"; };
+		F4C252421FF4E86B008485D2 /* YKHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKHomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,7 +215,9 @@
 		F42B97621FF492C600EB765B /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F42B97651FF4931100EB765B /* YKHomeViewController.swift */,
+				F4C252411FF4E86B008485D2 /* controllers */,
+				F4C252441FF4E8A9008485D2 /* models */,
+				F4C252451FF4E8A9008485D2 /* views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -234,6 +236,28 @@
 				F42B97691FF4932F00EB765B /* YKMeViewController.swift */,
 			);
 			path = Me;
+			sourceTree = "<group>";
+		};
+		F4C252411FF4E86B008485D2 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4C252421FF4E86B008485D2 /* YKHomeViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		F4C252441FF4E8A9008485D2 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		F4C252451FF4E8A9008485D2 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,18 +539,22 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TicketApp/Pods-TicketApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
@@ -544,11 +572,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F42B97681FF4932400EB765B /* YKMarketViewController.swift in Sources */,
+				F4C252431FF4E86B008485D2 /* YKHomeViewController.swift in Sources */,
 				F42B97611FF380E900EB765B /* YKNavigationViewController.swift in Sources */,
 				F42B976A1FF4932F00EB765B /* YKMeViewController.swift in Sources */,
 				F42B975F1FF380BC00EB765B /* YKTabBarController.swift in Sources */,
 				F42B97321FF37F9A00EB765B /* TicketApp.xcdatamodeld in Sources */,
-				F42B97661FF4931100EB765B /* YKHomeViewController.swift in Sources */,
 				F42B972A1FF37F9A00EB765B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

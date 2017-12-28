@@ -12,7 +12,7 @@ class YKMarketViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.view.backgroundColor = UIColor.blue
+         self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
     }
 

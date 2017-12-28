@@ -8,28 +8,50 @@
 
 import UIKit
 
-class YKNavigationViewController: UINavigationController {
+class YKNavigationViewController: UINavigationController,UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+       self.delegate = self
+        
+        
+        
     }
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        
+//        设置通用导航栏背景图片
+        navigationController.navigationBar.setBackgroundImage(UIImage(named:"navbar_background_image"), for: .default)
+        
+        navigationController.navigationBar.isTranslucent = false
+        
+        navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white,NSFontAttributeName:UIFont.systemFont(ofSize: 17)]
+        
+//        设置通用返回按钮
+        if self.viewControllers.count > 1 {
+            
+            let leftBarButtonItem = UIBarButtonItem(title:"", style: .plain, target: self, action: #selector(leftBarButtonItemAction))
+            
+            leftBarButtonItem.image = UIImage(named:"nav_back_leftArrow")?.withRenderingMode(.alwaysOriginal)
+            
+            viewController.navigationItem.leftBarButtonItem = leftBarButtonItem
+        }
+        
+    }
+    
+   func leftBarButtonItemAction(){
+        
+        self.popViewController(animated: true)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

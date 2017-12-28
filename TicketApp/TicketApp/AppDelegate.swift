@@ -25,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
+//        设置全工程状态栏字体颜色
+        UIApplication.shared.statusBarStyle = .lightContent
+//        同时要修改info.plist 中设置View controller-based status bar appearance 为NO
+        
         return true
     }
 
