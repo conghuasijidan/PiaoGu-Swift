@@ -14,13 +14,29 @@ class YKMarketViewController: UIViewController {
         super.viewDidLoad()
          self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
+        
+        setupUI()
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    fileprivate   func loadData(){
+        
+        
+    }
     
+    fileprivate   func setupUI(){
+        
+        let view = UIView(frame:CGRect(x:0,y:0,width:375*kWidthScale,height:554*kWidthScale))
+        view.backgroundColor = UIColor.orange
+        self.view .addSubview(view)
+        
+        
+    }
+
 
     /*
     // MARK: - Navigation

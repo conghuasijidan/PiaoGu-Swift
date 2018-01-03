@@ -32,7 +32,7 @@ class YKTabBarController: UITabBarController {
         self.tabBar.barTintColor = UIColor.white
     }
 
-    func setChildViewController() -> () {
+   private func setChildViewController() -> () {
     
         let arr = [["className":"YKHomeViewController","title":"首页","imageName":"home_tabBar_normal","imageName_selected":"home_tabBar_selected"],
                    ["className":"YKMarketViewController","title":"市场","imageName":"market_tabBar_normal","imageName_selected":"market_tabBar_selected"],
@@ -53,9 +53,9 @@ class YKTabBarController: UITabBarController {
         
     }
     
-    func createViewControllerWithDict(dict:[String:String]) -> UIViewController?{
+  private  func createViewControllerWithDict(dict:[String:String]) -> UIViewController?{
         
-        let nameSpaceStr = self.getAPPName()
+        let nameSpaceStr = getAPPName()
         
         guard let className = dict["className"] else {
             
@@ -81,11 +81,7 @@ class YKTabBarController: UITabBarController {
         return navVC
     }
     
-    func getAPPName() -> String{
-        let nameKey = "CFBundleName"
-        let appName = Bundle.main.object(forInfoDictionaryKey: nameKey) as? String   //这里也是坑，请不要翻译oc的代码，而是去NSBundle类里面看它的api
-        return appName!
-    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

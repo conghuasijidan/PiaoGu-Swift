@@ -4,7 +4,7 @@ PODS:
   - SDWebImage (4.2.2):
     - SDWebImage/Core (= 4.2.2)
   - SDWebImage/Core (4.2.2)
-  - SnapKit (4.0.0)
+  - SnapKit (3.0.2)
   - SVProgressHUD (1.1.3)
   - SwiftyJSON (4.0.0)
   - YYModel (1.0.4)
@@ -14,7 +14,7 @@ DEPENDENCIES:
   - Alamofire
   - pop
   - SDWebImage
-  - SnapKit
+  - SnapKit (~> 3.0.0)
   - SVProgressHUD (= 1.1.3)
   - SwiftyJSON
   - YYModel
@@ -24,12 +24,12 @@ SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: bec3d12e28bc7b1cd4f87d3f7afcac7e10deb494
+PODFILE CHECKSUM: 3132c98420dcb5ac0acdef648f1391d3d0e07c82
 
 COCOAPODS: 1.3.1

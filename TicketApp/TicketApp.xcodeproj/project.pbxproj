@@ -21,6 +21,13 @@
 		F42B97681FF4932400EB765B /* YKMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B97671FF4932400EB765B /* YKMarketViewController.swift */; };
 		F42B976A1FF4932F00EB765B /* YKMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B97691FF4932F00EB765B /* YKMeViewController.swift */; };
 		F4C252431FF4E86B008485D2 /* YKHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252421FF4E86B008485D2 /* YKHomeViewController.swift */; };
+		F4C252471FF5D3B2008485D2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252461FF5D3B2008485D2 /* UIView+Extension.swift */; };
+		F4C252491FF5EEE4008485D2 /* Header-pch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252481FF5EEE4008485D2 /* Header-pch.swift */; };
+		F4C2524B1FF5EFD5008485D2 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2524A1FF5EFD5008485D2 /* UILabel+Extension.swift */; };
+		F4C2524D1FF61BE1008485D2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2524C1FF61BE1008485D2 /* UIColor+Extension.swift */; };
+		F4C2524F1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2524E1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift */; };
+		F4C252511FFB6654008485D2 /* YKHomeUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252501FFB6654008485D2 /* YKHomeUserTableViewCell.swift */; };
+		F4C252531FFB66B5008485D2 /* YKHomeProfitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252521FFB66B5008485D2 /* YKHomeProfitTableViewCell.swift */; };
 		F8B0110DC1B10CCFCB5232F1 /* Pods_TicketAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF7D102718AA4A2E55AB7C6 /* Pods_TicketAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +76,13 @@
 		F42B97671FF4932400EB765B /* YKMarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMarketViewController.swift; sourceTree = "<group>"; };
 		F42B97691FF4932F00EB765B /* YKMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMeViewController.swift; sourceTree = "<group>"; };
 		F4C252421FF4E86B008485D2 /* YKHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKHomeViewController.swift; sourceTree = "<group>"; };
+		F4C252461FF5D3B2008485D2 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		F4C252481FF5EEE4008485D2 /* Header-pch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Header-pch.swift"; sourceTree = "<group>"; };
+		F4C2524A1FF5EFD5008485D2 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		F4C2524C1FF61BE1008485D2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		F4C2524E1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKHomeAccountTableViewCell.swift; sourceTree = "<group>"; };
+		F4C252501FFB6654008485D2 /* YKHomeUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKHomeUserTableViewCell.swift; sourceTree = "<group>"; };
+		F4C252521FFB66B5008485D2 /* YKHomeProfitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKHomeProfitTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				F42B97291FF37F9A00EB765B /* AppDelegate.swift */,
-				F42B975A1FF3804000EB765B /* Category */,
+				F42B975A1FF3804000EB765B /* Extension */,
 				F42B975B1FF3804000EB765B /* Class */,
 				F42B975C1FF3804000EB765B /* Main */,
 				F42B975D1FF3804000EB765B /* Tools */,
@@ -157,6 +171,7 @@
 				F42B97351FF37F9A00EB765B /* LaunchScreen.storyboard */,
 				F42B97381FF37F9A00EB765B /* Info.plist */,
 				F42B97301FF37F9A00EB765B /* TicketApp.xcdatamodeld */,
+				F4C252481FF5EEE4008485D2 /* Header-pch.swift */,
 			);
 			path = TicketApp;
 			sourceTree = "<group>";
@@ -179,10 +194,11 @@
 			path = TicketAppUITests;
 			sourceTree = "<group>";
 		};
-		F42B975A1FF3804000EB765B /* Category */ = {
+		F42B975A1FF3804000EB765B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			name = Extension;
 			path = Category;
 			sourceTree = "<group>";
 		};
@@ -208,6 +224,9 @@
 		F42B975D1FF3804000EB765B /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F4C252461FF5D3B2008485D2 /* UIView+Extension.swift */,
+				F4C2524A1FF5EFD5008485D2 /* UILabel+Extension.swift */,
+				F4C2524C1FF61BE1008485D2 /* UIColor+Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -256,6 +275,9 @@
 		F4C252451FF4E8A9008485D2 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				F4C2524E1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift */,
+				F4C252501FFB6654008485D2 /* YKHomeUserTableViewCell.swift */,
+				F4C252521FFB66B5008485D2 /* YKHomeProfitTableViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -571,10 +593,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C2524F1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift in Sources */,
+				F4C2524B1FF5EFD5008485D2 /* UILabel+Extension.swift in Sources */,
 				F42B97681FF4932400EB765B /* YKMarketViewController.swift in Sources */,
 				F4C252431FF4E86B008485D2 /* YKHomeViewController.swift in Sources */,
+				F4C2524D1FF61BE1008485D2 /* UIColor+Extension.swift in Sources */,
+				F4C252471FF5D3B2008485D2 /* UIView+Extension.swift in Sources */,
+				F4C252531FFB66B5008485D2 /* YKHomeProfitTableViewCell.swift in Sources */,
 				F42B97611FF380E900EB765B /* YKNavigationViewController.swift in Sources */,
 				F42B976A1FF4932F00EB765B /* YKMeViewController.swift in Sources */,
+				F4C252511FFB6654008485D2 /* YKHomeUserTableViewCell.swift in Sources */,
+				F4C252491FF5EEE4008485D2 /* Header-pch.swift in Sources */,
 				F42B975F1FF380BC00EB765B /* YKTabBarController.swift in Sources */,
 				F42B97321FF37F9A00EB765B /* TicketApp.xcdatamodeld in Sources */,
 				F42B972A1FF37F9A00EB765B /* AppDelegate.swift in Sources */,
@@ -735,6 +764,7 @@
 				DEVELOPMENT_TEAM = 9TDA7J4V7G;
 				INFOPLIST_FILE = TicketApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" ";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ubangwang.TicketApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

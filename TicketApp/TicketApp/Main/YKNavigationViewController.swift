@@ -26,7 +26,7 @@ class YKNavigationViewController: UINavigationController,UINavigationControllerD
 //        设置通用导航栏背景图片
         navigationController.navigationBar.setBackgroundImage(UIImage(named:"navbar_background_image"), for: .default)
         
-        navigationController.navigationBar.isTranslucent = false
+//        navigationController.navigationBar.isTranslucent = false
         
         navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white,NSFontAttributeName:UIFont.systemFont(ofSize: 17)]
         
@@ -42,7 +42,7 @@ class YKNavigationViewController: UINavigationController,UINavigationControllerD
         
     }
     
-   func leftBarButtonItemAction(){
+  @objc private func leftBarButtonItemAction(){
         
         self.popViewController(animated: true)
     }
