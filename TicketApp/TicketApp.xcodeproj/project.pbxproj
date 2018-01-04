@@ -18,16 +18,26 @@
 		F42B974D1FF37F9A00EB765B /* TicketAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B974C1FF37F9A00EB765B /* TicketAppUITests.swift */; };
 		F42B975F1FF380BC00EB765B /* YKTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B975E1FF380BC00EB765B /* YKTabBarController.swift */; };
 		F42B97611FF380E900EB765B /* YKNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B97601FF380E900EB765B /* YKNavigationViewController.swift */; };
-		F42B97681FF4932400EB765B /* YKMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B97671FF4932400EB765B /* YKMarketViewController.swift */; };
 		F42B976A1FF4932F00EB765B /* YKMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B97691FF4932F00EB765B /* YKMeViewController.swift */; };
 		F4C252431FF4E86B008485D2 /* YKHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252421FF4E86B008485D2 /* YKHomeViewController.swift */; };
-		F4C252471FF5D3B2008485D2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252461FF5D3B2008485D2 /* UIView+Extension.swift */; };
 		F4C252491FF5EEE4008485D2 /* Header-pch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252481FF5EEE4008485D2 /* Header-pch.swift */; };
-		F4C2524B1FF5EFD5008485D2 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2524A1FF5EFD5008485D2 /* UILabel+Extension.swift */; };
-		F4C2524D1FF61BE1008485D2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2524C1FF61BE1008485D2 /* UIColor+Extension.swift */; };
 		F4C2524F1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2524E1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift */; };
 		F4C252511FFB6654008485D2 /* YKHomeUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252501FFB6654008485D2 /* YKHomeUserTableViewCell.swift */; };
 		F4C252531FFB66B5008485D2 /* YKHomeProfitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252521FFB66B5008485D2 /* YKHomeProfitTableViewCell.swift */; };
+		F4C252A81FFCD62D008485D2 /* YKAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252A71FFCD62D008485D2 /* YKAccountViewController.swift */; };
+		F4C252AA1FFCD939008485D2 /* YKMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252A91FFCD939008485D2 /* YKMessageViewController.swift */; };
+		F4C252BB1FFDC48D008485D2 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C252AE1FFDC48D008485D2 /* TAAbstractDotView.m */; };
+		F4C252BC1FFDC48D008485D2 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C252B01FFDC48D008485D2 /* TAAnimatedDotView.m */; };
+		F4C252BD1FFDC48D008485D2 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C252B21FFDC48D008485D2 /* TADotView.m */; };
+		F4C252BE1FFDC48D008485D2 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C252B41FFDC48D008485D2 /* TAPageControl.m */; };
+		F4C252BF1FFDC48D008485D2 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C252B61FFDC48D008485D2 /* SDCollectionViewCell.m */; };
+		F4C252C01FFDC48D008485D2 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C252B81FFDC48D008485D2 /* SDCycleScrollView.m */; };
+		F4C252C11FFDC48D008485D2 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C252BA1FFDC48D008485D2 /* UIView+SDExtension.m */; };
+		F4C252CC1FFDC4DD008485D2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252C91FFDC4DD008485D2 /* UIColor+Extension.swift */; };
+		F4C252CD1FFDC4DD008485D2 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252CA1FFDC4DD008485D2 /* UILabel+Extension.swift */; };
+		F4C252CE1FFDC4DD008485D2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252CB1FFDC4DD008485D2 /* UIView+Extension.swift */; };
+		F4C252D41FFE14A6008485D2 /* YKMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252D11FFE14A6008485D2 /* YKMarketViewController.swift */; };
+		F4C252D81FFE22B4008485D2 /* YKMarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252D71FFE22B4008485D2 /* YKMarketModel.swift */; };
 		F8B0110DC1B10CCFCB5232F1 /* Pods_TicketAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF7D102718AA4A2E55AB7C6 /* Pods_TicketAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,16 +83,34 @@
 		F42B974E1FF37F9A00EB765B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F42B975E1FF380BC00EB765B /* YKTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKTabBarController.swift; sourceTree = "<group>"; };
 		F42B97601FF380E900EB765B /* YKNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKNavigationViewController.swift; sourceTree = "<group>"; };
-		F42B97671FF4932400EB765B /* YKMarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMarketViewController.swift; sourceTree = "<group>"; };
 		F42B97691FF4932F00EB765B /* YKMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMeViewController.swift; sourceTree = "<group>"; };
 		F4C252421FF4E86B008485D2 /* YKHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKHomeViewController.swift; sourceTree = "<group>"; };
-		F4C252461FF5D3B2008485D2 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		F4C252481FF5EEE4008485D2 /* Header-pch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Header-pch.swift"; sourceTree = "<group>"; };
-		F4C2524A1FF5EFD5008485D2 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
-		F4C2524C1FF61BE1008485D2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		F4C2524E1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKHomeAccountTableViewCell.swift; sourceTree = "<group>"; };
 		F4C252501FFB6654008485D2 /* YKHomeUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKHomeUserTableViewCell.swift; sourceTree = "<group>"; };
 		F4C252521FFB66B5008485D2 /* YKHomeProfitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKHomeProfitTableViewCell.swift; sourceTree = "<group>"; };
+		F4C252A71FFCD62D008485D2 /* YKAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKAccountViewController.swift; sourceTree = "<group>"; };
+		F4C252A91FFCD939008485D2 /* YKMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMessageViewController.swift; sourceTree = "<group>"; };
+		F4C252AD1FFDC48D008485D2 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		F4C252AE1FFDC48D008485D2 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		F4C252AF1FFDC48D008485D2 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		F4C252B01FFDC48D008485D2 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		F4C252B11FFDC48D008485D2 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		F4C252B21FFDC48D008485D2 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		F4C252B31FFDC48D008485D2 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		F4C252B41FFDC48D008485D2 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		F4C252B51FFDC48D008485D2 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		F4C252B61FFDC48D008485D2 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		F4C252B71FFDC48D008485D2 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		F4C252B81FFDC48D008485D2 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		F4C252B91FFDC48D008485D2 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		F4C252BA1FFDC48D008485D2 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		F4C252C91FFDC4DD008485D2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		F4C252CA1FFDC4DD008485D2 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		F4C252CB1FFDC4DD008485D2 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		F4C252CF1FFDCB24008485D2 /* Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
+		F4C252D11FFE14A6008485D2 /* YKMarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMarketViewController.swift; sourceTree = "<group>"; };
+		F4C252D71FFE22B4008485D2 /* YKMarketModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMarketModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,16 +190,17 @@
 			isa = PBXGroup;
 			children = (
 				F42B97291FF37F9A00EB765B /* AppDelegate.swift */,
-				F42B975A1FF3804000EB765B /* Extension */,
+				F4C252C81FFDC4DD008485D2 /* Extension */,
+				F42B975D1FF3804000EB765B /* Tools */,
 				F42B975B1FF3804000EB765B /* Class */,
 				F42B975C1FF3804000EB765B /* Main */,
-				F42B975D1FF3804000EB765B /* Tools */,
 				F42B972D1FF37F9A00EB765B /* Main.storyboard */,
 				F42B97331FF37F9A00EB765B /* Assets.xcassets */,
 				F42B97351FF37F9A00EB765B /* LaunchScreen.storyboard */,
 				F42B97381FF37F9A00EB765B /* Info.plist */,
 				F42B97301FF37F9A00EB765B /* TicketApp.xcdatamodeld */,
 				F4C252481FF5EEE4008485D2 /* Header-pch.swift */,
+				F4C252CF1FFDCB24008485D2 /* Bridge-Header.h */,
 			);
 			path = TicketApp;
 			sourceTree = "<group>";
@@ -192,14 +221,6 @@
 				F42B974E1FF37F9A00EB765B /* Info.plist */,
 			);
 			path = TicketAppUITests;
-			sourceTree = "<group>";
-		};
-		F42B975A1FF3804000EB765B /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Extension;
-			path = Category;
 			sourceTree = "<group>";
 		};
 		F42B975B1FF3804000EB765B /* Class */ = {
@@ -224,9 +245,7 @@
 		F42B975D1FF3804000EB765B /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				F4C252461FF5D3B2008485D2 /* UIView+Extension.swift */,
-				F4C2524A1FF5EFD5008485D2 /* UILabel+Extension.swift */,
-				F4C2524C1FF61BE1008485D2 /* UIColor+Extension.swift */,
+				F4C252AB1FFDC48D008485D2 /* SDCycleScrollView */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -244,7 +263,9 @@
 		F42B97631FF492C600EB765B /* Market */ = {
 			isa = PBXGroup;
 			children = (
-				F42B97671FF4932400EB765B /* YKMarketViewController.swift */,
+				F4C252D01FFE14A6008485D2 /* controller */,
+				F4C252D21FFE14A6008485D2 /* model */,
+				F4C252D31FFE14A6008485D2 /* view */,
 			);
 			path = Market;
 			sourceTree = "<group>";
@@ -260,6 +281,10 @@
 		F4C252411FF4E86B008485D2 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F4C252A31FFCD5B1008485D2 /* User */,
+				F4C2529B1FFCD5B1008485D2 /* Message */,
+				F4C252971FFCD50F008485D2 /* Account */,
+				F4C2529F1FFCD5B1008485D2 /* Profit */,
 				F4C252421FF4E86B008485D2 /* YKHomeViewController.swift */,
 			);
 			path = controllers;
@@ -275,11 +300,199 @@
 		F4C252451FF4E8A9008485D2 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				F4C2524E1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift */,
 				F4C252501FFB6654008485D2 /* YKHomeUserTableViewCell.swift */,
+				F4C2524E1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift */,
 				F4C252521FFB66B5008485D2 /* YKHomeProfitTableViewCell.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		F4C252971FFCD50F008485D2 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				F4C252981FFCD510008485D2 /* controller */,
+				F4C252991FFCD510008485D2 /* model */,
+				F4C2529A1FFCD510008485D2 /* view */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		F4C252981FFCD510008485D2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4C252A71FFCD62D008485D2 /* YKAccountViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		F4C252991FFCD510008485D2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F4C2529A1FFCD510008485D2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		F4C2529B1FFCD5B1008485D2 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				F4C2529C1FFCD5B1008485D2 /* controller */,
+				F4C2529D1FFCD5B1008485D2 /* model */,
+				F4C2529E1FFCD5B1008485D2 /* view */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		F4C2529C1FFCD5B1008485D2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4C252A91FFCD939008485D2 /* YKMessageViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		F4C2529D1FFCD5B1008485D2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F4C2529E1FFCD5B1008485D2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		F4C2529F1FFCD5B1008485D2 /* Profit */ = {
+			isa = PBXGroup;
+			children = (
+				F4C252A01FFCD5B1008485D2 /* controller */,
+				F4C252A11FFCD5B1008485D2 /* model */,
+				F4C252A21FFCD5B1008485D2 /* view */,
+			);
+			path = Profit;
+			sourceTree = "<group>";
+		};
+		F4C252A01FFCD5B1008485D2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		F4C252A11FFCD5B1008485D2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F4C252A21FFCD5B1008485D2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		F4C252A31FFCD5B1008485D2 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				F4C252A41FFCD5B1008485D2 /* controller */,
+				F4C252A51FFCD5B1008485D2 /* model */,
+				F4C252A61FFCD5B1008485D2 /* view */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		F4C252A41FFCD5B1008485D2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		F4C252A51FFCD5B1008485D2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F4C252A61FFCD5B1008485D2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		F4C252AB1FFDC48D008485D2 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				F4C252AC1FFDC48D008485D2 /* PageControl */,
+				F4C252B51FFDC48D008485D2 /* SDCollectionViewCell.h */,
+				F4C252B61FFDC48D008485D2 /* SDCollectionViewCell.m */,
+				F4C252B71FFDC48D008485D2 /* SDCycleScrollView.h */,
+				F4C252B81FFDC48D008485D2 /* SDCycleScrollView.m */,
+				F4C252B91FFDC48D008485D2 /* UIView+SDExtension.h */,
+				F4C252BA1FFDC48D008485D2 /* UIView+SDExtension.m */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		F4C252AC1FFDC48D008485D2 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				F4C252AD1FFDC48D008485D2 /* TAAbstractDotView.h */,
+				F4C252AE1FFDC48D008485D2 /* TAAbstractDotView.m */,
+				F4C252AF1FFDC48D008485D2 /* TAAnimatedDotView.h */,
+				F4C252B01FFDC48D008485D2 /* TAAnimatedDotView.m */,
+				F4C252B11FFDC48D008485D2 /* TADotView.h */,
+				F4C252B21FFDC48D008485D2 /* TADotView.m */,
+				F4C252B31FFDC48D008485D2 /* TAPageControl.h */,
+				F4C252B41FFDC48D008485D2 /* TAPageControl.m */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		F4C252C81FFDC4DD008485D2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F4C252C91FFDC4DD008485D2 /* UIColor+Extension.swift */,
+				F4C252CA1FFDC4DD008485D2 /* UILabel+Extension.swift */,
+				F4C252CB1FFDC4DD008485D2 /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F4C252D01FFE14A6008485D2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4C252D11FFE14A6008485D2 /* YKMarketViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		F4C252D21FFE14A6008485D2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F4C252D71FFE22B4008485D2 /* YKMarketModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F4C252D31FFE14A6008485D2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -593,20 +806,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C252CD1FFDC4DD008485D2 /* UILabel+Extension.swift in Sources */,
+				F4C252CC1FFDC4DD008485D2 /* UIColor+Extension.swift in Sources */,
+				F4C252AA1FFCD939008485D2 /* YKMessageViewController.swift in Sources */,
 				F4C2524F1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift in Sources */,
-				F4C2524B1FF5EFD5008485D2 /* UILabel+Extension.swift in Sources */,
-				F42B97681FF4932400EB765B /* YKMarketViewController.swift in Sources */,
+				F4C252BF1FFDC48D008485D2 /* SDCollectionViewCell.m in Sources */,
+				F4C252D41FFE14A6008485D2 /* YKMarketViewController.swift in Sources */,
 				F4C252431FF4E86B008485D2 /* YKHomeViewController.swift in Sources */,
-				F4C2524D1FF61BE1008485D2 /* UIColor+Extension.swift in Sources */,
-				F4C252471FF5D3B2008485D2 /* UIView+Extension.swift in Sources */,
+				F4C252C01FFDC48D008485D2 /* SDCycleScrollView.m in Sources */,
 				F4C252531FFB66B5008485D2 /* YKHomeProfitTableViewCell.swift in Sources */,
+				F4C252BC1FFDC48D008485D2 /* TAAnimatedDotView.m in Sources */,
+				F4C252CE1FFDC4DD008485D2 /* UIView+Extension.swift in Sources */,
+				F4C252BB1FFDC48D008485D2 /* TAAbstractDotView.m in Sources */,
+				F4C252BD1FFDC48D008485D2 /* TADotView.m in Sources */,
 				F42B97611FF380E900EB765B /* YKNavigationViewController.swift in Sources */,
 				F42B976A1FF4932F00EB765B /* YKMeViewController.swift in Sources */,
+				F4C252D81FFE22B4008485D2 /* YKMarketModel.swift in Sources */,
 				F4C252511FFB6654008485D2 /* YKHomeUserTableViewCell.swift in Sources */,
+				F4C252C11FFDC48D008485D2 /* UIView+SDExtension.m in Sources */,
 				F4C252491FF5EEE4008485D2 /* Header-pch.swift in Sources */,
 				F42B975F1FF380BC00EB765B /* YKTabBarController.swift in Sources */,
 				F42B97321FF37F9A00EB765B /* TicketApp.xcdatamodeld in Sources */,
+				F4C252BE1FFDC48D008485D2 /* TAPageControl.m in Sources */,
 				F42B972A1FF37F9A00EB765B /* AppDelegate.swift in Sources */,
+				F4C252A81FFCD62D008485D2 /* YKAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,6 +990,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" ";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ubangwang.TicketApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TicketApp/Bridge-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -781,6 +1005,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ubangwang.TicketApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TicketApp/Bridge-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

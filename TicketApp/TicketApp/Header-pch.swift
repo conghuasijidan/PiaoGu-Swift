@@ -9,7 +9,7 @@
 import Foundation
 
 import SnapKit
-import SwiftyJSON
+
 
 
 let kScreenHeight = UIScreen.main.bounds.size.height
@@ -22,8 +22,9 @@ let kHeightScale = (kScreenHeight - 113)/554.0
 
 let kWidthScale = kScreenWidth/375.0
 
+let qiniu = "http://ovc3poav6.bkt.clouddn.com/"
 
-
+typealias CallBack = ()->Void
 
 
 

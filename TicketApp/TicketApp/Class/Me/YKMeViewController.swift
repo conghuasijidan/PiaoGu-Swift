@@ -13,6 +13,7 @@ class YKMeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          self.view.backgroundColor = UIColor.white
+         self.title = "我的"
         // Do any additional setup after loading the view.
     }
 

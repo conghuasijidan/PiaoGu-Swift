@@ -1,42 +1,27 @@
 //
-//  YKMarketViewController.swift
+//  YKMessageViewController.swift
 //  TicketApp
 //
-//  Created by 葱花思鸡蛋 on 2017/12/28.
-//  Copyright © 2017年 hangzhouzhulongkeji. All rights reserved.
+//  Created by 葱花思鸡蛋 on 2018/1/3.
+//  Copyright © 2018年 hangzhouzhulongkeji. All rights reserved.
 //
 
 import UIKit
 
-class YKMarketViewController: UIViewController {
+class YKMessageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.white
+        self.title = "消息"
         // Do any additional setup after loading the view.
-        
-        setupUI()
-        loadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    fileprivate   func loadData(){
-        
-        
-    }
     
-    fileprivate   func setupUI(){
-        
-        let view = UIView(frame:CGRect(x:0,y:0,width:375*kWidthScale,height:554*kWidthScale))
-        view.backgroundColor = UIColor.orange
-        self.view .addSubview(view)
-        
-        
-    }
-
 
     /*
     // MARK: - Navigation

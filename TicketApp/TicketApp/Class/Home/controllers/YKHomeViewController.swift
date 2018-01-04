@@ -14,7 +14,7 @@ class YKHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
     private let accountCellID = "homeAccountCellID"
     private let profitCellID = "homeProfitCellID"
     
-    var kViewHeitht:CGFloat = 0.0
+    private var tableView:UITableView? = nil
     
     
     override func viewDidLoad() {
@@ -31,6 +31,7 @@ class YKHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
 //        print(tabBarHeight)
 //        print(kStatusHeight)
 //        kViewHeitht = kScreenHeight - kStatusHeight - navHeight - tabBarHeight
+        
         
     }
     
@@ -61,7 +62,7 @@ class YKHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
 //        tableView.backgroundColor = UIColor.orange
     
         self.view .addSubview(tableView)
-    
+        self.tableView = tableView
     
         
     }
@@ -78,7 +79,13 @@ class YKHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
             
             let cell:YKHomeUserTableViewCell = tableView.dequeueReusableCell(withIdentifier: userCellID, for: indexPath) as! YKHomeUserTableViewCell
             
-            cell.backgroundColor = UIColor.yk_randomColor()
+            cell.messageCallBack = {
+                
+                let vc = YKMessageViewController()
+                
+                self.navigationController?.pushViewController(vc, animated: true)
+                
+            }
             
             cell.selectionStyle = .none
             
@@ -87,7 +94,13 @@ class YKHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
         }else if indexPath.row == 1 {
             let cell:YKHomeAccountTableViewCell = tableView.dequeueReusableCell(withIdentifier: accountCellID, for: indexPath) as! YKHomeAccountTableViewCell
             
-            cell.backgroundColor = UIColor.yk_randomColor()
+//            cell.backgroundColor = UIColor.yk_randomColor()
+            cell.showDetailCallBack = {
+                
+                let vc = YKAccountViewController()
+                
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
             
             cell.selectionStyle = .none
             
@@ -96,9 +109,18 @@ class YKHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
         {
             let cell:YKHomeProfitTableViewCell = tableView.dequeueReusableCell(withIdentifier: profitCellID, for: indexPath) as! YKHomeProfitTableViewCell
             
-            cell.backgroundColor = UIColor.yk_randomColor()
+//            cell.backgroundColor = UIColor.yk_randomColor()
             
             cell.selectionStyle = .none
+            
+            if indexPath.row == 2 {
+                cell.bgImage = UIImage(named:"home_invest_bg")
+            }else
+            {
+                cell.bgImage = UIImage(named:"home_income_bg")
+
+            }
+            
             
             return cell
         }
@@ -127,6 +149,14 @@ class YKHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         tableView.deselectRow(at: indexPath, animated: true)
         
+        if indexPath.row == 0 {
+            
+            let vc = YKMeViewController()
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        
         
         
     }
@@ -134,8 +164,8 @@ class YKHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
     
    fileprivate func loadData(){
         
-        
-        
+    
+//        self.tableView?.reloadData()
         
     }
 
