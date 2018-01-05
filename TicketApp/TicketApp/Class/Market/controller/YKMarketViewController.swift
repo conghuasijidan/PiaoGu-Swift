@@ -33,45 +33,40 @@ class YKMarketViewController: UIViewController,SDCycleScrollViewDelegate {
              
         let url = "https://piaogood.com/1.0/promotion"
         
-        Alamofire.request(url, method: .get).responseJSON { (response) in
+        YKNetWorkTool.shareInstance.getRequest(urlStr: url, parameters: nil, success: { (response) in
             
-            if let json = response.result.value {
-                
-                
-                //                try catch 一下
-                guard let promotions:Array = JSON(json)["promotions"].rawValue as? Array<Any> else{
-                    
-                    YKLog(message: "promotions 为空")
-                    
-                    return
-                }
-                
-                //                字典转模型
-                
-                var arrM = [String]()
-                
-                for dict in promotions {
-                    
-                    let model =  YKMarketModel(dict:dict as! [String : Any])
-                    
-                    let  imgurl = qiniu + model.photo!
-                    
-                    arrM.append(imgurl)
-                    
-                }
-                
-//                因为已经tabviewHeader 无法进行数据源刷新，请求下来数据直接重新赋值
-                
-                self.cycleView?.imageURLStringsGroup = arrM
-
-                
-            }
+            
+                            guard let promotions:Array = JSON(response)["promotions"].rawValue as? Array<Any> else{
+            
+                                YKLog(message: "promotions 为空")
+            
+                                return
+                            }
+            
+                            //  字典转模型
+            
+                            var arrM = [String]()
+            
+                            for dict in promotions {
+            
+                                let model =  YKMarketModel(dict:dict as! [String : Any])
+            
+                                let  imgurl = qiniu + model.photo!
+            
+                                arrM.append(imgurl)
+                                
+                            }
+                            
+                            // 因为已经tabviewHeader 无法进行数据源刷新，请求下来数据直接重新赋值
+                            
+                            self.cycleView?.imageURLStringsGroup = arrM
+            
+        }) { (error) in
+            
+            
             
             
         }
-        
-        
-        
         
         
         

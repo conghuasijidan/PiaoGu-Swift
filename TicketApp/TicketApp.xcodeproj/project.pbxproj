@@ -38,6 +38,7 @@
 		F4C252CE1FFDC4DD008485D2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252CB1FFDC4DD008485D2 /* UIView+Extension.swift */; };
 		F4C252D41FFE14A6008485D2 /* YKMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252D11FFE14A6008485D2 /* YKMarketViewController.swift */; };
 		F4C252D81FFE22B4008485D2 /* YKMarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252D71FFE22B4008485D2 /* YKMarketModel.swift */; };
+		F4C252DB1FFF2DDE008485D2 /* YKNetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252DA1FFF2DDE008485D2 /* YKNetWorkTool.swift */; };
 		F8B0110DC1B10CCFCB5232F1 /* Pods_TicketAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF7D102718AA4A2E55AB7C6 /* Pods_TicketAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		F4C252CF1FFDCB24008485D2 /* Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		F4C252D11FFE14A6008485D2 /* YKMarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMarketViewController.swift; sourceTree = "<group>"; };
 		F4C252D71FFE22B4008485D2 /* YKMarketModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMarketModel.swift; sourceTree = "<group>"; };
+		F4C252DA1FFF2DDE008485D2 /* YKNetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKNetWorkTool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 		F42B975D1FF3804000EB765B /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F4C252D91FFF2D89008485D2 /* NetWorkTool */,
 				F4C252AB1FFDC48D008485D2 /* SDCycleScrollView */,
 			);
 			path = Tools;
@@ -493,6 +496,14 @@
 			children = (
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		F4C252D91FFF2D89008485D2 /* NetWorkTool */ = {
+			isa = PBXGroup;
+			children = (
+				F4C252DA1FFF2DDE008485D2 /* YKNetWorkTool.swift */,
+			);
+			path = NetWorkTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -811,6 +822,7 @@
 				F4C252AA1FFCD939008485D2 /* YKMessageViewController.swift in Sources */,
 				F4C2524F1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift in Sources */,
 				F4C252BF1FFDC48D008485D2 /* SDCollectionViewCell.m in Sources */,
+				F4C252DB1FFF2DDE008485D2 /* YKNetWorkTool.swift in Sources */,
 				F4C252D41FFE14A6008485D2 /* YKMarketViewController.swift in Sources */,
 				F4C252431FF4E86B008485D2 /* YKHomeViewController.swift in Sources */,
 				F4C252C01FFDC48D008485D2 /* SDCycleScrollView.m in Sources */,
