@@ -284,11 +284,11 @@
 		F4C252411FF4E86B008485D2 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F4C252421FF4E86B008485D2 /* YKHomeViewController.swift */,
 				F4C252A31FFCD5B1008485D2 /* User */,
 				F4C2529B1FFCD5B1008485D2 /* Message */,
 				F4C252971FFCD50F008485D2 /* Account */,
 				F4C2529F1FFCD5B1008485D2 /* Profit */,
-				F4C252421FF4E86B008485D2 /* YKHomeViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";

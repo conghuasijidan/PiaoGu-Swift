@@ -33,9 +33,12 @@ class YKHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
 //        kViewHeitht = kScreenHeight - kStatusHeight - navHeight - tabBarHeight
         
         
+       
+        
+
     }
     
-   
+    
 
   fileprivate  func setupUI(){
         
@@ -160,8 +163,7 @@ class YKHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         
     }
-    
-    
+   
    fileprivate func loadData(){
         
     
