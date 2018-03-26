@@ -10,11 +10,12 @@ import UIKit
 
 class YKMarketModel: NSObject {
 
-    var photo:String?
+   @objc var photo:String?
     
 //     kvc 转模型
     init(dict : [String : Any]) {
         super.init()
+        
         setValuesForKeys(dict)
     }
     

@@ -41,7 +41,8 @@ class YKHomeAccountTableViewCell: UITableViewCell {
         }
         balanceBgView.snp.makeConstraints { (make) in
             make.center.equalTo(self.contentView)
-            make.size.equalTo(CGSize(width:191*kWidthScale,height:192*kHeightScale))
+            make.size.equalTo(CGSize(width:191*kHeightScale,height:192*kHeightScale))
+            
         }
         balanceBgImageView.snp.makeConstraints { (make) in
             make.center.equalTo(balanceBgView)
@@ -79,15 +80,15 @@ class YKHomeAccountTableViewCell: UITableViewCell {
     }
     
     
-    private lazy var balanceLabel = UILabel.yk_createLabel(text: "账户余额（元）", textColor: 0xffffff, fontSize: 14*kWidthScale)
+    private lazy var balanceLabel = UILabel.yk_createLabel(text: "账户余额（元）", textColor: 0xffffff, fontSize: 14*kHeightScale)
     private lazy var bgImageView = UIImageView(image:UIImage(named:"home_account_bg"))
     
     private lazy var balanceBgView:UIView = UIView()
     private lazy var balanceBgImageView = UIImageView(image:UIImage(named:"home_account_circle_bg"))
 
-    private lazy var lastProfitLabel = UILabel.yk_createLabel(text: "昨日:+350", textColor: 0xffffff, fontSize: 12*kWidthScale)
-    private lazy var accountLabel = UILabel.yk_createLabel(text: "6666.66", textColor: 0xffffff, fontSize: 30*kWidthScale)
-    private lazy var showDetailLabel = UILabel.yk_createLabel(text: "查看详情", textColor: 0xffffff, fontSize: 12*kWidthScale)
+    private lazy var lastProfitLabel = UILabel.yk_createLabel(text: "昨日:+350", textColor: 0xffffff, fontSize: 12*kHeightScale)
+    private lazy var accountLabel = UILabel.yk_createLabel(text: "6666.66", textColor: 0xffffff, fontSize: 30*kHeightScale)
+    private lazy var showDetailLabel = UILabel.yk_createLabel(text: "查看详情", textColor: 0xffffff, fontSize: 12*kHeightScale)
     
 
     

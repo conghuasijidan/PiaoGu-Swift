@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Alamofire
+//import Alamofire
 import SwiftyJSON
 
 class YKMarketViewController: UIViewController,SDCycleScrollViewDelegate {
@@ -30,45 +30,11 @@ class YKMarketViewController: UIViewController,SDCycleScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     fileprivate func loadData(){
-             
-        let url = "https://piaogood.com/1.0/promotion"
         
-        YKNetWorkTool.shareInstance.getRequest(urlStr: url, parameters: nil, success: { (response) in
+        YKNetWorkData.shareInstance.getPromotion(success: { (resonse) in
+            self.cycleView?.imageURLStringsGroup = resonse
             
-            
-                            guard let promotions:Array = JSON(response)["promotions"].rawValue as? Array<Any> else{
-            
-                                YKLog(message: "promotions 为空")
-            
-                                return
-                            }
-            
-                            //  字典转模型
-            
-                            var arrM = [String]()
-            
-                            for dict in promotions {
-            
-                                let model =  YKMarketModel(dict:dict as! [String : Any])
-            
-                                let  imgurl = qiniu + model.photo!
-            
-                                arrM.append(imgurl)
-                                
-                            }
-                            
-                            // 因为已经tabviewHeader 无法进行数据源刷新，请求下来数据直接重新赋值
-                            
-                            self.cycleView?.imageURLStringsGroup = arrM
-            
-        }) { (error) in
-            
-            
-            
-            
-        }
-        
-        
+        })
         
     }
     

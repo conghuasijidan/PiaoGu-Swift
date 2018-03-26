@@ -28,8 +28,9 @@ class YKNavigationViewController: UINavigationController,UINavigationControllerD
         
 //        navigationController.navigationBar.isTranslucent = false
         
-        navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white,NSFontAttributeName:UIFont.systemFont(ofSize: 17)]
-        
+//        swift4
+        navigationController.navigationBar.titleTextAttributes =  [NSAttributedStringKey.foregroundColor:UIColor.white,NSAttributedStringKey.font:UIFont.systemFont(ofSize: 17)]
+//        navigationController.navigationBar.titleTextAttributes = []
 //        设置通用返回按钮
         if self.viewControllers.count > 1 {
             

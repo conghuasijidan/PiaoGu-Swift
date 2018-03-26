@@ -14,9 +14,12 @@ class YKMeViewController: UIViewController {
         super.viewDidLoad()
          self.view.backgroundColor = UIColor.white
          self.title = "我的"
+        
         // Do any additional setup after loading the view.
     }
-
+    func backTo(){
+        self.navigationController?.popViewController(animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

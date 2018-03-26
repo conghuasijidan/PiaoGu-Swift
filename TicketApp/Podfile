@@ -6,12 +6,13 @@ target 'TicketApp' do
   use_frameworks!
 	pod 'SnapKit', '~> 3.0.0’
 	pod 'Alamofire', '~> 4.0.1’
-    pod ‘SwiftyJSON’
+   	pod ‘SwiftyJSON’
 	pod 'SDWebImage'
 	pod 'SVProgressHUD','1.1.3'
 	pod 'YYModel'
 	pod 'pop'
 	pod 'YYText'
+	pod 'MJRefresh'
   # Pods for TicketApp
 
   target 'TicketAppTests' do

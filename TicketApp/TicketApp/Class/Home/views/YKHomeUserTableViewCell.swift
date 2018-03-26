@@ -65,7 +65,7 @@ class YKHomeUserTableViewCell: UITableViewCell {
 
     private lazy var bgImageView = UIImageView(image:UIImage(named:"home_user_bg"))
     private lazy var avatarImageView = UIImageView(image:UIImage(named:"home_user_icon_placehoder"))
-    private lazy var nameLabel = UILabel.yk_createLabel(text: "葱花思鸡蛋", textColor: 0xffffff, fontSize: 14*kWidthScale)
+    private lazy var nameLabel = UILabel.yk_createLabel(text: "葱花思鸡蛋", textColor: 0xffffff, fontSize: 14*kHeightScale)
     
     private lazy var messageButton:UIButton = {
         

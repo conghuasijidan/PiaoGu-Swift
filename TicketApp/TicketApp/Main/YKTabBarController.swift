@@ -9,20 +9,24 @@
 import UIKit
 
 class YKTabBarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white;
         
         self.setChildViewController()
         
         //        改变字体颜色234,23,63 UIColor.init()
-        //         设置选中时的颜色
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(red: 234/255, green: 23/255, blue: 63/255, alpha: 1)], for: UIControlState.selected)
+        //       swift3.2  设置选中时的颜色
+        //        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(red: 234/255, green: 23/255, blue: 63/255, alpha: 1)], for: UIControlState.selected)
         //        设置未选中时的颜色
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName:UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)], for: .normal)
+        //        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName:UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)], for: .normal)
+        
+//        swift 4.0
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor(red: 234/255, green: 23/255, blue: 63/255, alpha: 1)], for: .selected)
         
         //        self.tabBar.itemPositioning = .centered
         //         self.tabBar.itemWidth =
@@ -31,9 +35,9 @@ class YKTabBarController: UITabBarController {
         //         设置背景图片
         self.tabBar.barTintColor = UIColor.white
     }
-
-   private func setChildViewController() -> () {
     
+    private func setChildViewController() -> () {
+        
         let arr = [["className":"YKHomeViewController","title":"首页","imageName":"home_tabBar_normal","imageName_selected":"home_tabBar_selected"],
                    ["className":"YKMarketViewController","title":"市场","imageName":"market_tabBar_normal","imageName_selected":"market_tabBar_selected"],
                    ["className":"YKMeViewController","title":"我的","imageName":"me_tabBar_normal","imageName_selected":"me_tabBar_selected"]
@@ -53,7 +57,7 @@ class YKTabBarController: UITabBarController {
         
     }
     
-  private  func createViewControllerWithDict(dict:[String:String]) -> UIViewController?{
+    private  func createViewControllerWithDict(dict:[String:String]) -> UIViewController?{
         
         let nameSpaceStr = getAPPName()
         
@@ -88,7 +92,7 @@ class YKTabBarController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-
-   
-
+    
+    
+    
 }

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		D575CDE43A70B0315599BD27 /* Pods_TicketAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D04FA59BD19082FC6CFEA1 /* Pods_TicketAppTests.framework */; };
 		EDD9F7030B661277967B6264 /* Pods_TicketApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88914E5F03AFD76DBC3155B /* Pods_TicketApp.framework */; };
+		F41852032068BEA100BFF2A3 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41852042068BEA100BFF2A3 /* SDWebImage.framework */; };
+		F41852052068BEF900BFF2A3 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41852062068BEF900BFF2A3 /* MJRefresh.framework */; };
+		F41852072068BF0400BFF2A3 /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41852082068BF0400BFF2A3 /* pop.framework */; };
+		F418520A2068E89400BFF2A3 /* YKNetWorkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41852092068E89400BFF2A3 /* YKNetWorkData.swift */; };
 		F42B972A1FF37F9A00EB765B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B97291FF37F9A00EB765B /* AppDelegate.swift */; };
 		F42B972F1FF37F9A00EB765B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42B972D1FF37F9A00EB765B /* Main.storyboard */; };
 		F42B97321FF37F9A00EB765B /* TicketApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F42B97301FF37F9A00EB765B /* TicketApp.xcdatamodeld */; };
@@ -69,6 +73,10 @@
 		B3C36ED41821D4B91E2D98C8 /* Pods-TicketAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicketAppTests/Pods-TicketAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D032FAE3C37A71FAD40C19ED /* Pods-TicketAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicketAppTests/Pods-TicketAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		DEF7D102718AA4A2E55AB7C6 /* Pods_TicketAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicketAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F41852042068BEA100BFF2A3 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F41852062068BEF900BFF2A3 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F41852082068BF0400BFF2A3 /* pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F41852092068E89400BFF2A3 /* YKNetWorkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKNetWorkData.swift; sourceTree = "<group>"; };
 		F42B97261FF37F9A00EB765B /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42B97291FF37F9A00EB765B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F42B972E1FF37F9A00EB765B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +128,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41852072068BF0400BFF2A3 /* pop.framework in Frameworks */,
+				F41852052068BEF900BFF2A3 /* MJRefresh.framework in Frameworks */,
+				F41852032068BEA100BFF2A3 /* SDWebImage.framework in Frameworks */,
 				EDD9F7030B661277967B6264 /* Pods_TicketApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +157,9 @@
 		12D1A0474AD15E73EBBD5219 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F41852082068BF0400BFF2A3 /* pop.framework */,
+				F41852062068BEF900BFF2A3 /* MJRefresh.framework */,
+				F41852042068BEA100BFF2A3 /* SDWebImage.framework */,
 				A88914E5F03AFD76DBC3155B /* Pods_TicketApp.framework */,
 				84D04FA59BD19082FC6CFEA1 /* Pods_TicketAppTests.framework */,
 				DEF7D102718AA4A2E55AB7C6 /* Pods_TicketAppUITests.framework */,
@@ -502,6 +516,7 @@
 			isa = PBXGroup;
 			children = (
 				F4C252DA1FFF2DDE008485D2 /* YKNetWorkTool.swift */,
+				F41852092068E89400BFF2A3 /* YKNetWorkData.swift */,
 			);
 			path = NetWorkTool;
 			sourceTree = "<group>";
@@ -786,6 +801,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TicketApp/Pods-TicketApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -797,6 +813,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -819,6 +836,7 @@
 			files = (
 				F4C252CD1FFDC4DD008485D2 /* UILabel+Extension.swift in Sources */,
 				F4C252CC1FFDC4DD008485D2 /* UIColor+Extension.swift in Sources */,
+				F418520A2068E89400BFF2A3 /* YKNetWorkData.swift in Sources */,
 				F4C252AA1FFCD939008485D2 /* YKMessageViewController.swift in Sources */,
 				F4C2524F1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift in Sources */,
 				F4C252BF1FFDC48D008485D2 /* SDCollectionViewCell.m in Sources */,
@@ -998,12 +1016,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9TDA7J4V7G;
 				INFOPLIST_FILE = TicketApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" ";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ubangwang.TicketApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TicketApp/Bridge-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1014,11 +1033,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9TDA7J4V7G;
 				INFOPLIST_FILE = TicketApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ubangwang.TicketApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TicketApp/Bridge-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

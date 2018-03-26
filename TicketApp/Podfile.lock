@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.0.1)
+  - MJRefresh (3.1.15.1)
   - pop (1.0.10)
   - SDWebImage (4.2.2):
     - SDWebImage/Core (= 4.2.2)
@@ -12,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0.1)
+  - MJRefresh
   - pop
   - SDWebImage
   - SnapKit (~> 3.0.0)
@@ -22,6 +24,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
@@ -30,6 +33,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 469a7042e8ffa9b9875d2391f918dc25b45a73ef
+PODFILE CHECKSUM: 532841df3249dd22a5f4c43f2c7843d78578218f
 
 COCOAPODS: 1.3.1
