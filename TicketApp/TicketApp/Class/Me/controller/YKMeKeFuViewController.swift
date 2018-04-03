@@ -1,29 +1,26 @@
 //
-//  YKAccountViewController.swift
+//  YKMeKeFuViewController.swift
 //  TicketApp
 //
-//  Created by 葱花思鸡蛋 on 2018/1/3.
+//  Created by 葱花思鸡蛋 on 2018/3/30.
 //  Copyright © 2018年 hangzhouzhulongkeji. All rights reserved.
 //
 
 import UIKit
 
-class YKAccountViewController: UIViewController {
+class YKMeKeFuViewController: YKBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "客服"
         self.view.backgroundColor = UIColor.white
-        self.title = "余额"
-//        self.navigationItem.title = "余额"
-        // Do any additional setup after loading the view.
+       
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
-
 
 }

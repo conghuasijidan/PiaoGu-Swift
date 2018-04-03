@@ -10,7 +10,7 @@ import UIKit
 import MJRefresh
 import SVProgressHUD
 
-class YKHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class YKHomeViewController: YKBaseViewController,UITableViewDelegate,UITableViewDataSource {
     
     private let userCellID = "homeUserCellID"
     private let accountCellID = "homeAccountCellID"
@@ -88,7 +88,7 @@ class YKHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
             
             cell.messageCallBack = {
                 
-                let vc = YKMessageViewController()
+                let vc = YKMeMessageViewController()
                 
                 self.navigationController?.pushViewController(vc, animated: true)
                 
@@ -104,7 +104,7 @@ class YKHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
             //            cell.backgroundColor = UIColor.yk_randomColor()
             cell.showDetailCallBack = {
                 
-                let vc = YKAccountViewController()
+                let vc = YKMeBalanceViewController()
                 
                 self.navigationController?.pushViewController(vc, animated: true)
             }
@@ -157,7 +157,7 @@ class YKHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         if indexPath.row == 0 {
             
-            let vc = YKMeViewController()
+            let vc = YKMeInfoViewController()
             
             self.navigationController?.pushViewController(vc, animated: true)
             

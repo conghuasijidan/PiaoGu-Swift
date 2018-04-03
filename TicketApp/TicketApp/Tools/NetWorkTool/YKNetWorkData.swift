@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import SVProgressHUD
 
 class YKNetWorkData: NSObject {
     
@@ -18,8 +19,9 @@ class YKNetWorkData: NSObject {
     private override init() {}
     
     func getPromotion(success:@escaping (_ response:[String])->()){
-        
-       
+//       SVProgressHUD.setBackgroundColor(UIColor.clear)
+        SVProgressHUD.setForegroundColor(UIColor.orange)
+        SVProgressHUD.show()
         var arrM = [String]()
         YKNetWorkTool.shareInstance.getRequest(urlStr: getPromotionUrl, parameters: nil, success: { (response) in
             
@@ -43,10 +45,11 @@ class YKNetWorkData: NSObject {
                 
             }
             success(arrM)
-            
+            SVProgressHUD.dismiss()
         }) { (error) in
             YKLog(message: "请求失败")
             YKLog(message: error)
+            SVProgressHUD.dismiss()
         }
         
     }
