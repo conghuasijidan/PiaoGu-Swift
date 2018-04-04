@@ -58,6 +58,8 @@
 		F4DA31982073570000C78A67 /* YKSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA31972073570000C78A67 /* YKSettingTableViewCell.swift */; };
 		F4DA319A20736C3A00C78A67 /* YKInvestProfitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA319920736C3A00C78A67 /* YKInvestProfitViewController.swift */; };
 		F4DA319C20736F5500C78A67 /* YKInvestProfitHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA319B20736F5500C78A67 /* YKInvestProfitHeaderView.swift */; };
+		F4DA319E2074A34200C78A67 /* YKInvestProfitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA319D2074A34200C78A67 /* YKInvestProfitTableViewCell.swift */; };
+		F4DA31A22074C45500C78A67 /* YKIncomeProfitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA31A12074C45500C78A67 /* YKIncomeProfitViewController.swift */; };
 		F4DDA9E72069F27B001DFE00 /* YKMarketHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDA9E62069F27B001DFE00 /* YKMarketHeaderView.swift */; };
 		F8B0110DC1B10CCFCB5232F1 /* Pods_TicketAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF7D102718AA4A2E55AB7C6 /* Pods_TicketAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -152,6 +154,8 @@
 		F4DA31972073570000C78A67 /* YKSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKSettingTableViewCell.swift; sourceTree = "<group>"; };
 		F4DA319920736C3A00C78A67 /* YKInvestProfitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKInvestProfitViewController.swift; sourceTree = "<group>"; };
 		F4DA319B20736F5500C78A67 /* YKInvestProfitHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKInvestProfitHeaderView.swift; sourceTree = "<group>"; };
+		F4DA319D2074A34200C78A67 /* YKInvestProfitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKInvestProfitTableViewCell.swift; sourceTree = "<group>"; };
+		F4DA31A12074C45500C78A67 /* YKIncomeProfitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKIncomeProfitViewController.swift; sourceTree = "<group>"; };
 		F4DDA9E62069F27B001DFE00 /* YKMarketHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMarketHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -370,6 +374,7 @@
 			children = (
 				F4C252421FF4E86B008485D2 /* YKHomeViewController.swift */,
 				F4DA319920736C3A00C78A67 /* YKInvestProfitViewController.swift */,
+				F4DA31A12074C45500C78A67 /* YKIncomeProfitViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -388,6 +393,7 @@
 				F4C2524E1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift */,
 				F4C252521FFB66B5008485D2 /* YKHomeProfitTableViewCell.swift */,
 				F4DA319B20736F5500C78A67 /* YKInvestProfitHeaderView.swift */,
+				F4DA319D2074A34200C78A67 /* YKInvestProfitTableViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -779,6 +785,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4DA319E2074A34200C78A67 /* YKInvestProfitTableViewCell.swift in Sources */,
 				F483E671206CD99100213215 /* YKMarketModel2.swift in Sources */,
 				F4C252CD1FFDC4DD008485D2 /* UILabel+Extension.swift in Sources */,
 				F4DA31982073570000C78A67 /* YKSettingTableViewCell.swift in Sources */,
@@ -817,6 +824,7 @@
 				F42B975F1FF380BC00EB765B /* YKTabBarController.swift in Sources */,
 				F42B97321FF37F9A00EB765B /* TicketApp.xcdatamodeld in Sources */,
 				F483E67A206E08E800213215 /* YKMeSecTwoTableViewCell.swift in Sources */,
+				F4DA31A22074C45500C78A67 /* YKIncomeProfitViewController.swift in Sources */,
 				F4DDA9E72069F27B001DFE00 /* YKMarketHeaderView.swift in Sources */,
 				F4C252BE1FFDC48D008485D2 /* TAPageControl.m in Sources */,
 				F42B972A1FF37F9A00EB765B /* AppDelegate.swift in Sources */,

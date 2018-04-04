@@ -161,6 +161,12 @@ class YKHomeViewController: YKBaseViewController,UITableViewDelegate,UITableView
             
             self.navigationController?.pushViewController(vc, animated: true)
             
+        }else if indexPath.row == 2{
+            let vc = YKInvestProfitViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else {
+            let vc = YKIncomeProfitViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

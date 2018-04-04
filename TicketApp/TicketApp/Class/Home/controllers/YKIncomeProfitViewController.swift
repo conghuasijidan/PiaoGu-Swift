@@ -1,19 +1,20 @@
 //
-//  YKInvestProfitViewController.swift
+//  YKIncomeViewController.swift
 //  TicketApp
 //
-//  Created by 葱花思鸡蛋 on 2018/4/3.
+//  Created by 葱花思鸡蛋 on 2018/4/4.
 //  Copyright © 2018年 hangzhouzhulongkeji. All rights reserved.
 //
 
 import UIKit
 
-class YKInvestProfitViewController: YKBaseViewController,UITableViewDataSource,UITableViewDelegate {
-    private let investCellID = "investCellID"
+class YKIncomeProfitViewController: YKBaseViewController,UITableViewDataSource,UITableViewDelegate  {
+
+    private let incomeCellID = "incomeCellID"
     private var tableView:UITableView?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "投资宝收益"
+        self.title = "收益票收益"
         let rightButton:UIButton = UIButton()
         rightButton.setTitle("记录", for: .normal)
         rightButton.titleLabel?.font = UIFont.systemFont(ofSize: 14*kHeightScale)
@@ -29,30 +30,29 @@ class YKInvestProfitViewController: YKBaseViewController,UITableViewDataSource,U
         let tableView:UITableView = UITableView(frame: CGRect(x:0,y:0,width:kScreenWidth,height:viewHeight), style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(YKInvestProfitTableViewCell.self, forCellReuseIdentifier: investCellID)
+        tableView.register(YKInvestProfitTableViewCell.self, forCellReuseIdentifier: incomeCellID)
         tableView.rowHeight = 135*kHeightScale
         tableView.separatorStyle = .none
         self.view.addSubview(tableView)
         self.tableView = tableView
         let headerView = YKInvestProfitHeaderView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 237*kHeightScale))
-         headerView.bgImage = UIImage(named:"home_invest_header_bg")
+        headerView.bgImage = UIImage(named:"home_income_header_bg")
         tableView.tableHeaderView = headerView
-       
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:YKInvestProfitTableViewCell = tableView.dequeueReusableCell(withIdentifier: investCellID, for: indexPath) as!YKInvestProfitTableViewCell
+        let cell:YKInvestProfitTableViewCell = tableView.dequeueReusableCell(withIdentifier: incomeCellID, for: indexPath) as!YKInvestProfitTableViewCell
         cell.selectionStyle = .none
         return cell
-
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
     //    MARK:记录点击事件
-   @objc fileprivate func rightItemAction(){
+    @objc fileprivate func rightItemAction(){
         YKLog(message: "记录点击事件")
         
     }
@@ -61,8 +61,6 @@ class YKInvestProfitViewController: YKBaseViewController,UITableViewDataSource,U
         
         
     }
-
-    
 
 
 }

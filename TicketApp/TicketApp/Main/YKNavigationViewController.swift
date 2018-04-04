@@ -12,10 +12,10 @@ class YKNavigationViewController: UINavigationController,UINavigationControllerD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
-       self.delegate = self
+        self.delegate = self
         
         
         
@@ -23,32 +23,34 @@ class YKNavigationViewController: UINavigationController,UINavigationControllerD
     
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         
-//        设置通用导航栏背景图片
-        navigationController.navigationBar.setBackgroundImage(UIImage(named:"navbar_background_image"), for: .default)
+        if viewController.isKind(of: YKIncomeProfitViewController.self) {
+            navigationController.navigationBar.setBackgroundImage(UIImage(named:"home_income_nav_bg"), for: .default)
+        }else{
+            //        设置通用导航栏背景图片
+            navigationController.navigationBar.setBackgroundImage(UIImage(named:"navbar_background_image"), for: .default)
+        }
         
-//        navigationController.navigationBar.isTranslucent = false
-        
-//        swift4
+        //        swift4
         navigationController.navigationBar.titleTextAttributes =  [NSAttributedStringKey.foregroundColor:UIColor.white,NSAttributedStringKey.font:UIFont.systemFont(ofSize: 17)]
-//        navigationController.navigationBar.titleTextAttributes = []
-//        设置通用返回按钮
+        //   navigationController.navigationBar.titleTextAttributes = []
+        //        设置通用返回按钮
         if self.viewControllers.count > 1 {
             
             let leftBarButtonItem = UIBarButtonItem(title:"", style: .plain, target: self, action: #selector(leftBarButtonItemAction))
             
             leftBarButtonItem.image = UIImage(named:"nav_back_leftArrow")?.withRenderingMode(.alwaysOriginal)
-            
+        
             viewController.navigationItem.leftBarButtonItem = leftBarButtonItem
         }
         
     }
     
-  @objc private func leftBarButtonItemAction(){
+    @objc private func leftBarButtonItemAction(){
         
         self.popViewController(animated: true)
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
