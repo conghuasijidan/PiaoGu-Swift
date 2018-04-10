@@ -26,7 +26,9 @@ class YKInvestProfitViewController: YKBaseViewController,UITableViewDataSource,U
     }
     
     fileprivate func setupUI(){
-        let tableView:UITableView = UITableView(frame: CGRect(x:0,y:0,width:kScreenWidth,height:viewHeight), style: .plain)
+        let height = result ? viewHeight:(viewHeight+49)
+        
+        let tableView:UITableView = UITableView(frame: CGRect(x:0,y:0,width:kScreenWidth,height:height), style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(YKInvestProfitTableViewCell.self, forCellReuseIdentifier: investCellID)
@@ -50,6 +52,8 @@ class YKInvestProfitViewController: YKBaseViewController,UITableViewDataSource,U
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 跳转产品详情
+        
     }
     //    MARK:记录点击事件
    @objc fileprivate func rightItemAction(){

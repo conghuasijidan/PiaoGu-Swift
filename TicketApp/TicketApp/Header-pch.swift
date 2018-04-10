@@ -15,7 +15,7 @@ var result: Bool = kScreenHeight == 812.0
 let kScreenHeight = UIScreen.main.bounds.size.height
 let kScreenWidth = UIScreen.main.bounds.size.width
 let kStatusHeight = UIApplication.shared.statusBarFrame.size.height
-let viewHeight = result ?(kScreenHeight-kStatusHeight-44-49):(kScreenHeight - kStatusHeight - 44 - 49)
+let viewHeight = result ?(kScreenHeight-kStatusHeight-44-49):(kScreenHeight - kStatusHeight - 44)
 let kHeightScale = result ? ((kScreenHeight - 171)/554.0):((kScreenHeight - 113)/554.0)
 let yHeightScale = result ? (kScreenHeight/667.0):(kScreenHeight/667.0)
 let kWidthScale = kScreenWidth/375.0
@@ -23,6 +23,7 @@ let kWidthScale = kScreenWidth/375.0
 let qiniu = "http://ovc3poav6.bkt.clouddn.com/"
 
 typealias CallBack = ()->Void
+typealias StringCallBack = (_ paramater:String)->Void
 
 //MARK:全局颜色
 

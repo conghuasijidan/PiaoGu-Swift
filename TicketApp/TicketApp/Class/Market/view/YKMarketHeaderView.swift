@@ -11,6 +11,9 @@ import UIKit
 class YKMarketHeaderView: UIView,SDCycleScrollViewDelegate {
 
     private var cycleView:SDCycleScrollView?
+    var callBack:StringCallBack?
+    private let INVESTID = "invest"
+    private let INCOMEID = "income"
     var imgUrl:[String]?{
         didSet{
             self.cycleView?.imageURLStringsGroup = imgUrl
@@ -126,10 +129,16 @@ class YKMarketHeaderView: UIView,SDCycleScrollViewDelegate {
    
     // MARK:投资宝和收益票点击事件
    @objc fileprivate func investBtnAction(){
-        YKLog(message: "投资宝点击事件")
+        
+        if callBack != nil {
+            callBack!(INVESTID)
+        }
+    
     }
   @objc fileprivate func incomeBtnAction(){
-        YKLog(message: "收益票点击事件")
+        if callBack != nil {
+            callBack!(INCOMEID)
+        }
     }
     //   MARK:轮播图点击
     func cycleScrollView(_ cycleScrollView: SDCycleScrollView!, didSelectItemAt index: Int) {

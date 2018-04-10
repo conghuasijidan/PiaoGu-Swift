@@ -92,6 +92,10 @@ class YKMeBalanceViewController: YKBaseViewController,UITableViewDelegate,UITabl
     }
     @objc private func rightItemAction(){
         YKLog(message: "跳转明细")
+        let vc = YKItemizeViewController()
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     private lazy var descLabel:UILabel = {

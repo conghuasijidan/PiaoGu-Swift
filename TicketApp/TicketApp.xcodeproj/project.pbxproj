@@ -27,6 +27,8 @@
 		F451E56C2071FD7800F5F3CA /* YKBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451E56B2071FD7800F5F3CA /* YKBaseViewController.swift */; };
 		F451E56E2071FEDD00F5F3CA /* YKBalanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451E56D2071FEDD00F5F3CA /* YKBalanceTableViewCell.swift */; };
 		F451E57020721C2E00F5F3CA /* YKMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451E56F20721C2E00F5F3CA /* YKMessageTableViewCell.swift */; };
+		F45FCE002079B22E0026A6B8 /* YKMarketInvestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45FCDFF2079B22E0026A6B8 /* YKMarketInvestViewController.swift */; };
+		F45FCE022079B2430026A6B8 /* YKMarketIncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45FCE012079B2430026A6B8 /* YKMarketIncomeViewController.swift */; };
 		F483E66F206C9CBF00213215 /* YKMarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483E66E206C9CBF00213215 /* YKMarketTableViewCell.swift */; };
 		F483E671206CD99100213215 /* YKMarketModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483E670206CD99100213215 /* YKMarketModel2.swift */; };
 		F483E672206CDD5E00213215 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F483E673206CDD5E00213215 /* SVProgressHUD.framework */; };
@@ -37,6 +39,13 @@
 		F483E680206E2A9C00213215 /* YKMeMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483E67F206E2A9C00213215 /* YKMeMessageViewController.swift */; };
 		F483E682206E2AB100213215 /* YKMeKeFuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483E681206E2AB100213215 /* YKMeKeFuViewController.swift */; };
 		F483E684206E2AC100213215 /* YKMeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483E683206E2AC100213215 /* YKMeSettingViewController.swift */; };
+		F4B2CEE32079C18600CEF361 /* YKMarketInvestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2CEE22079C18600CEF361 /* YKMarketInvestTableViewCell.swift */; };
+		F4B2CEE52079C6EA00CEF361 /* YKMarketDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2CEE42079C6EA00CEF361 /* YKMarketDetailViewController.swift */; };
+		F4B2CEE72079F44400CEF361 /* YKMarketDetailOneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2CEE62079F44400CEF361 /* YKMarketDetailOneTableViewCell.swift */; };
+		F4B2CEE92079F45D00CEF361 /* YKMarketDetailTwoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2CEE82079F45D00CEF361 /* YKMarketDetailTwoTableViewCell.swift */; };
+		F4B2CEEB207A171D00CEF361 /* YKSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2CEEA207A171D00CEF361 /* YKSlider.swift */; };
+		F4B2CEED207C8F7300CEF361 /* YKItemizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2CEEC207C8F7300CEF361 /* YKItemizeViewController.swift */; };
+		F4B2CEEF207C916200CEF361 /* YKItemizeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2CEEE207C916200CEF361 /* YKItemizeTableViewCell.swift */; };
 		F4C252431FF4E86B008485D2 /* YKHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252421FF4E86B008485D2 /* YKHomeViewController.swift */; };
 		F4C252491FF5EEE4008485D2 /* Header-pch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C252481FF5EEE4008485D2 /* Header-pch.swift */; };
 		F4C2524F1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2524E1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift */; };
@@ -115,6 +124,8 @@
 		F451E56B2071FD7800F5F3CA /* YKBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKBaseViewController.swift; sourceTree = "<group>"; };
 		F451E56D2071FEDD00F5F3CA /* YKBalanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKBalanceTableViewCell.swift; sourceTree = "<group>"; };
 		F451E56F20721C2E00F5F3CA /* YKMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMessageTableViewCell.swift; sourceTree = "<group>"; };
+		F45FCDFF2079B22E0026A6B8 /* YKMarketInvestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMarketInvestViewController.swift; sourceTree = "<group>"; };
+		F45FCE012079B2430026A6B8 /* YKMarketIncomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMarketIncomeViewController.swift; sourceTree = "<group>"; };
 		F483E66E206C9CBF00213215 /* YKMarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMarketTableViewCell.swift; sourceTree = "<group>"; };
 		F483E670206CD99100213215 /* YKMarketModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMarketModel2.swift; sourceTree = "<group>"; };
 		F483E673206CDD5E00213215 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +136,13 @@
 		F483E67F206E2A9C00213215 /* YKMeMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMeMessageViewController.swift; sourceTree = "<group>"; };
 		F483E681206E2AB100213215 /* YKMeKeFuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMeKeFuViewController.swift; sourceTree = "<group>"; };
 		F483E683206E2AC100213215 /* YKMeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMeSettingViewController.swift; sourceTree = "<group>"; };
+		F4B2CEE22079C18600CEF361 /* YKMarketInvestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMarketInvestTableViewCell.swift; sourceTree = "<group>"; };
+		F4B2CEE42079C6EA00CEF361 /* YKMarketDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMarketDetailViewController.swift; sourceTree = "<group>"; };
+		F4B2CEE62079F44400CEF361 /* YKMarketDetailOneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMarketDetailOneTableViewCell.swift; sourceTree = "<group>"; };
+		F4B2CEE82079F45D00CEF361 /* YKMarketDetailTwoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMarketDetailTwoTableViewCell.swift; sourceTree = "<group>"; };
+		F4B2CEEA207A171D00CEF361 /* YKSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKSlider.swift; sourceTree = "<group>"; };
+		F4B2CEEC207C8F7300CEF361 /* YKItemizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKItemizeViewController.swift; sourceTree = "<group>"; };
+		F4B2CEEE207C916200CEF361 /* YKItemizeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKItemizeTableViewCell.swift; sourceTree = "<group>"; };
 		F4C252421FF4E86B008485D2 /* YKHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKHomeViewController.swift; sourceTree = "<group>"; };
 		F4C252481FF5EEE4008485D2 /* Header-pch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Header-pch.swift"; sourceTree = "<group>"; };
 		F4C2524E1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKHomeAccountTableViewCell.swift; sourceTree = "<group>"; };
@@ -345,6 +363,7 @@
 				F483E67F206E2A9C00213215 /* YKMeMessageViewController.swift */,
 				F483E681206E2AB100213215 /* YKMeKeFuViewController.swift */,
 				F483E683206E2AC100213215 /* YKMeSettingViewController.swift */,
+				F4B2CEEC207C8F7300CEF361 /* YKItemizeViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -365,6 +384,7 @@
 				F451E56D2071FEDD00F5F3CA /* YKBalanceTableViewCell.swift */,
 				F451E56F20721C2E00F5F3CA /* YKMessageTableViewCell.swift */,
 				F4DA31972073570000C78A67 /* YKSettingTableViewCell.swift */,
+				F4B2CEEE207C916200CEF361 /* YKItemizeTableViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -389,8 +409,8 @@
 		F4C252451FF4E8A9008485D2 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				F4C252501FFB6654008485D2 /* YKHomeUserTableViewCell.swift */,
 				F4C2524E1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift */,
+				F4C252501FFB6654008485D2 /* YKHomeUserTableViewCell.swift */,
 				F4C252521FFB66B5008485D2 /* YKHomeProfitTableViewCell.swift */,
 				F4DA319B20736F5500C78A67 /* YKInvestProfitHeaderView.swift */,
 				F4DA319D2074A34200C78A67 /* YKInvestProfitTableViewCell.swift */,
@@ -433,6 +453,7 @@
 				F4C252C91FFDC4DD008485D2 /* UIColor+Extension.swift */,
 				F4C252CA1FFDC4DD008485D2 /* UILabel+Extension.swift */,
 				F4C252CB1FFDC4DD008485D2 /* UIView+Extension.swift */,
+				F4B2CEEA207A171D00CEF361 /* YKSlider.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -441,6 +462,9 @@
 			isa = PBXGroup;
 			children = (
 				F4C252D11FFE14A6008485D2 /* YKMarketViewController.swift */,
+				F45FCDFF2079B22E0026A6B8 /* YKMarketInvestViewController.swift */,
+				F45FCE012079B2430026A6B8 /* YKMarketIncomeViewController.swift */,
+				F4B2CEE42079C6EA00CEF361 /* YKMarketDetailViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -459,6 +483,9 @@
 			children = (
 				F4DDA9E62069F27B001DFE00 /* YKMarketHeaderView.swift */,
 				F483E66E206C9CBF00213215 /* YKMarketTableViewCell.swift */,
+				F4B2CEE22079C18600CEF361 /* YKMarketInvestTableViewCell.swift */,
+				F4B2CEE62079F44400CEF361 /* YKMarketDetailOneTableViewCell.swift */,
+				F4B2CEE82079F45D00CEF361 /* YKMarketDetailTwoTableViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -787,11 +814,14 @@
 			files = (
 				F4DA319E2074A34200C78A67 /* YKInvestProfitTableViewCell.swift in Sources */,
 				F483E671206CD99100213215 /* YKMarketModel2.swift in Sources */,
+				F4B2CEE32079C18600CEF361 /* YKMarketInvestTableViewCell.swift in Sources */,
 				F4C252CD1FFDC4DD008485D2 /* UILabel+Extension.swift in Sources */,
 				F4DA31982073570000C78A67 /* YKSettingTableViewCell.swift in Sources */,
+				F4B2CEE52079C6EA00CEF361 /* YKMarketDetailViewController.swift in Sources */,
 				F4C252CC1FFDC4DD008485D2 /* UIColor+Extension.swift in Sources */,
 				F451E57020721C2E00F5F3CA /* YKMessageTableViewCell.swift in Sources */,
 				F418520A2068E89400BFF2A3 /* YKNetWorkData.swift in Sources */,
+				F4B2CEEF207C916200CEF361 /* YKItemizeTableViewCell.swift in Sources */,
 				F4C2524F1FFB662C008485D2 /* YKHomeAccountTableViewCell.swift in Sources */,
 				F451E56A2071CBD800F5F3CA /* YKInfoTableViewCell.swift in Sources */,
 				F4C252BF1FFDC48D008485D2 /* SDCollectionViewCell.m in Sources */,
@@ -811,22 +841,28 @@
 				F4C252BD1FFDC48D008485D2 /* TADotView.m in Sources */,
 				F42B97611FF380E900EB765B /* YKNavigationViewController.swift in Sources */,
 				F42B976A1FF4932F00EB765B /* YKMeViewController.swift in Sources */,
+				F4B2CEEB207A171D00CEF361 /* YKSlider.swift in Sources */,
 				F451E56C2071FD7800F5F3CA /* YKBaseViewController.swift in Sources */,
 				F4DA319A20736C3A00C78A67 /* YKInvestProfitViewController.swift in Sources */,
 				F4C252D81FFE22B4008485D2 /* YKMarketModel.swift in Sources */,
+				F4B2CEE72079F44400CEF361 /* YKMarketDetailOneTableViewCell.swift in Sources */,
 				F451E56E2071FEDD00F5F3CA /* YKBalanceTableViewCell.swift in Sources */,
 				F483E678206E08B800213215 /* YKMeSecOneTableViewCell.swift in Sources */,
+				F45FCE022079B2430026A6B8 /* YKMarketIncomeViewController.swift in Sources */,
 				F4C252511FFB6654008485D2 /* YKHomeUserTableViewCell.swift in Sources */,
 				F4C252C11FFDC48D008485D2 /* UIView+SDExtension.m in Sources */,
 				F4C252491FF5EEE4008485D2 /* Header-pch.swift in Sources */,
 				F483E67C206E2A7000213215 /* YKMeInfoViewController.swift in Sources */,
 				F483E680206E2A9C00213215 /* YKMeMessageViewController.swift in Sources */,
 				F42B975F1FF380BC00EB765B /* YKTabBarController.swift in Sources */,
+				F45FCE002079B22E0026A6B8 /* YKMarketInvestViewController.swift in Sources */,
 				F42B97321FF37F9A00EB765B /* TicketApp.xcdatamodeld in Sources */,
 				F483E67A206E08E800213215 /* YKMeSecTwoTableViewCell.swift in Sources */,
+				F4B2CEE92079F45D00CEF361 /* YKMarketDetailTwoTableViewCell.swift in Sources */,
 				F4DA31A22074C45500C78A67 /* YKIncomeProfitViewController.swift in Sources */,
 				F4DDA9E72069F27B001DFE00 /* YKMarketHeaderView.swift in Sources */,
 				F4C252BE1FFDC48D008485D2 /* TAPageControl.m in Sources */,
+				F4B2CEED207C8F7300CEF361 /* YKItemizeViewController.swift in Sources */,
 				F42B972A1FF37F9A00EB765B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

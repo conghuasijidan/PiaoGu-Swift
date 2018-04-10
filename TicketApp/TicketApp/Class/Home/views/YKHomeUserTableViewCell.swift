@@ -87,10 +87,8 @@ class YKHomeUserTableViewCell: UITableViewCell {
 
    @objc private func navMessageAction() {
         
-    if (messageCallBack != nil) {
-        
+    if messageCallBack != nil {
         messageCallBack!()
-        
     }
         
     }

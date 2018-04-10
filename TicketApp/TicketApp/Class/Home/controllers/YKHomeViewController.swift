@@ -65,11 +65,12 @@ class YKHomeViewController: YKBaseViewController,UITableViewDelegate,UITableView
          MJRefreshBackNormalFooter() 刷新后不会恢复原位
          MJRefreshNormalFooter() 会恢复原位
  */
-        let fooder = MJRefreshBackNormalFooter()
+//        let fooder = MJRefreshBackNormalFooter()
+        let footer = MJRefreshBackNormalFooter()
         header.setRefreshingTarget(self, refreshingAction: #selector(YKHomeViewController.refreshData))
-        fooder.setRefreshingTarget(self, refreshingAction: #selector(YKHomeViewController.loadMore))
+        footer.setRefreshingTarget(self, refreshingAction: #selector(YKHomeViewController.loadMore))
         tableView.mj_header = header
-        tableView.mj_footer = fooder
+        tableView.mj_footer = footer
         
         
     }
@@ -164,7 +165,7 @@ class YKHomeViewController: YKBaseViewController,UITableViewDelegate,UITableView
         }else if indexPath.row == 2{
             let vc = YKInvestProfitViewController()
             self.navigationController?.pushViewController(vc, animated: true)
-        }else {
+        }else if indexPath.row == 3{
             let vc = YKIncomeProfitViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }

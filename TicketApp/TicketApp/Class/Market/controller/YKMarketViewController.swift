@@ -21,7 +21,6 @@ class YKMarketViewController: YKBaseViewController,UITableViewDelegate,UITableVi
         self.view.backgroundColor = UIColor.white
         self.title = "市场"
         
-       
         setupUI()
         loadData()
     }
@@ -65,7 +64,20 @@ class YKMarketViewController: YKBaseViewController,UITableViewDelegate,UITableVi
         let headerView:YKMarketHeaderView = YKMarketHeaderView.init(frame: CGRect.init(x: 0, y: 0, width: kScreenWidth, height: 320*kHeightScale))
         tableView.tableHeaderView = headerView
         self.headerView = headerView
-        
+//        投资宝 和 收益票 跳转
+        headerView.callBack = { (para)->() in
+            
+            if para == "invest"{
+                YKLog(message: "投资宝")
+               let vc = YKMarketInvestViewController()
+               self.navigationController?.pushViewController(vc, animated: true)
+            }else{
+                YKLog(message: "收益票")
+                let vc = YKMarketInvestViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+    
         let header = MJRefreshNormalHeader()
         let fooder = MJRefreshBackNormalFooter()
         header.setRefreshingTarget(self, refreshingAction: #selector(YKMarketViewController.refreshData))
@@ -83,6 +95,11 @@ class YKMarketViewController: YKBaseViewController,UITableViewDelegate,UITableVi
         cell.selectionStyle = .none
         cell.model = self.modelList?[indexPath.row]
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = YKMarketDetailViewController()
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     //    MARK:刷新
    @objc private func refreshData(){
