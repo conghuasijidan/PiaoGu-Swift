@@ -26,7 +26,7 @@ class YKMeBalanceViewController: YKBaseViewController,UITableViewDelegate,UITabl
         
     }
     fileprivate func setRightButtonItem (){
-        let button:UIButton = UIButton()
+        let button:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30*kHeightScale, height: 30*kHeightScale))
         button.setTitle("明细", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14*kHeightScale)
         button.setTitleColor(UIColor.white, for: .normal)
@@ -80,16 +80,28 @@ class YKMeBalanceViewController: YKBaseViewController,UITableViewDelegate,UITabl
         case 0:
             cell.iconImage = UIImage(named:"home_balance_topup_icon")
             cell.descText = "充值"
+            cell.selectionStyle = .none
             break
         default:
             cell.iconImage = UIImage(named:"home_balance_cash_icon")
             cell.descText = "提现"
+            cell.selectionStyle = .none
             break
         }
         
         return cell
         
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let vc = YKTopUpViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else{
+            let vc = YKWithdrawViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     @objc private func rightItemAction(){
         YKLog(message: "跳转明细")
         let vc = YKItemizeViewController()

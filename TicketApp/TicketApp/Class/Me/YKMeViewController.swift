@@ -7,19 +7,28 @@
 //
 
 import UIKit
+import MWPhotoBrowser
 
-class YKMeViewController: YKBaseViewController,UITableViewDelegate,UITableViewDataSource {
+class YKMeViewController: YKBaseViewController,UITableViewDelegate,UITableViewDataSource,MWPhotoBrowserDelegate,SDPhotoBrowserDelegate {
 
     private var tableView:UITableView?
     private let sectionOneCell = "scetionOneCell"
     private let sectionTwoCell = "scetionTwoCell"
+    private var photoList = [UIImage]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.title = "我的"
         loadData()
         setupUI()
-    
+//        mw 图片浏览器
+//        let photo = MWPhoto(image: UIImage(named:"me_name_placehoder"))!
+//        photoList.append(photo)
+//        sd 图片浏览器
+        let photo = UIImage(named:"me_name_placehoder")
+        photoList.append(photo!)
+        
+        
     }
     
 
@@ -33,8 +42,22 @@ class YKMeViewController: YKBaseViewController,UITableViewDelegate,UITableViewDa
         self.view.addSubview(tableView)
         self.tableView = tableView
         
-        
     }
+    
+    //    MARK: 图片浏览器代理
+    func numberOfPhotos(in photoBrowser: MWPhotoBrowser!) -> UInt {
+        return UInt(photoList.count)
+    }
+    func photoBrowser(_ photoBrowser: MWPhotoBrowser!, photoAt index: UInt) -> MWPhotoProtocol! {
+        if photoList.count != 0 {
+            let idx = Int(index)
+            return photoList[idx] as! MWPhotoProtocol
+        }
+        
+        return nil
+    }
+   
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -55,6 +78,23 @@ class YKMeViewController: YKBaseViewController,UITableViewDelegate,UITableViewDa
         case 0:
             let cell:YKMeSecOneTableViewCell = tableView.dequeueReusableCell(withIdentifier:sectionOneCell, for: indexPath) as! YKMeSecOneTableViewCell
             cell.selectionStyle = .none
+            cell.avatarCallBack =  {[weak self] in
+                
+                
+                //        MW添加图片浏览器
+//                let MWBrowser = MWPhotoBrowser(delegate: self)
+//                MWBrowser?.setCurrentPhotoIndex(0)
+//                self.navigationController?.pushViewController(MWBrowser!, animated: true)
+                //       SD图片浏览器  可以直接放在view视图中
+                let photoBrower =  SDPhotoBrowser()
+                photoBrower.delegate = self
+                photoBrower.currentImageIndex = 0
+                photoBrower.imageCount = self!.photoList.count
+                photoBrower.sourceImagesContainerView = self?.view
+                photoBrower.show()
+                
+
+            }
             return cell
         default:
             let cell:YKMeSecTwoTableViewCell = tableView.dequeueReusableCell(withIdentifier:sectionTwoCell, for: indexPath) as! YKMeSecTwoTableViewCell
@@ -65,11 +105,11 @@ class YKMeViewController: YKBaseViewController,UITableViewDelegate,UITableViewDa
                     cell.descText = "个人信息"
                     break;
                 case 1:
-                    cell.iconImage = UIImage(named:"me_message")
+                    cell.iconImage = UIImage(named:"home_balance_cash_icon")
                     cell.descText = "余额"
                     break;
                 case 2:
-                    cell.iconImage = UIImage(named:"me_message")
+                    cell.iconImage = UIImage(named:"home_balance_topup_icon")
                     cell.descText = "消息"
                     break;
                 case 3:
@@ -128,6 +168,28 @@ class YKMeViewController: YKBaseViewController,UITableViewDelegate,UITableViewDa
        
         
     }
+    //MARK: 实现photoBrower 的代理方法
+    
+//    如果有高质量图片的话实现此方法
+    
+//    func photoBrowser(_ browser: SDPhotoBrowser!, highQualityImageURLFor index: Int) -> URL!
+//    {
+////        替换高质量图片地址
+//        let urlStr = photoList[index]
+//
+//        return
+//
+//    }
+    
+    
+    func photoBrowser(_ browser: SDPhotoBrowser!, placeholderImageFor index: Int) -> UIImage! {
+        
+        
+        return photoList[index]
+        
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

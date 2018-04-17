@@ -8,9 +8,10 @@
 
 import UIKit
 
+
 class YKMeSecOneTableViewCell: UITableViewCell {
 
-   
+    var avatarCallBack:CallBack?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,10 +52,26 @@ class YKMeSecOneTableViewCell: UITableViewCell {
             make.height.equalTo(10*kHeightScale)
         }
         
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(avatarTapAction))
+        
+        self.avatarImageView.addGestureRecognizer(recognizer)
+        
     }
+    @objc private func avatarTapAction() {
+        
+        if avatarCallBack != nil {
+            avatarCallBack!()
+        }
+        
+    }
+    
+    
+    
+    
     private lazy var avatarImageView:UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named:"me_name_placehoder")
+        imageView.isUserInteractionEnabled = true
         return imageView
     }()
     private lazy var nameLabel:UILabel = {

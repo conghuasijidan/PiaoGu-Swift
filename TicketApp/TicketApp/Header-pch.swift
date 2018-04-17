@@ -8,7 +8,7 @@
 
 import Foundation
 import SnapKit
-import SVProgressHUD
+
 
 //MARK:适配屏幕
 var result: Bool = kScreenHeight == 812.0
@@ -48,10 +48,12 @@ func getAPPName() -> String{
 //当前系统版本
 let kVersion = (UIDevice.current.systemVersion as NSString).floatValue
 
-//是否: IOS 8以上
-func is_IOS8() -> Bool { return (UIDevice.current.systemVersion as NSString).doubleValue >= 8.0 }
+//是否: IOS 10以上
+func is_IOS10() -> Bool { return (UIDevice.current.systemVersion as NSString).doubleValue >= 10.0 }
 
+//是否: IOS 11以上
+func is_IOS11() -> Bool { return (UIDevice.current.systemVersion as NSString).doubleValue >= 11.0 }
 
-
-
+//是否: IOS 9以上
+func is_IOS9() -> Bool { return (UIDevice.current.systemVersion as NSString).doubleValue >= 9.0 }
 

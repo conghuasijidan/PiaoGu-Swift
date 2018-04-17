@@ -36,11 +36,15 @@ class YKNavigationViewController: UINavigationController,UINavigationControllerD
         //        设置通用返回按钮
         if self.viewControllers.count > 1 {
             
-            let leftBarButtonItem = UIBarButtonItem(title:"", style: .plain, target: self, action: #selector(leftBarButtonItemAction))
+//            let leftBarButtonItem = UIBarButtonItem(title:"", style: .plain, target: self, action: #selector(leftBarButtonItemAction))
+//            leftBarButtonItem.image = UIImage(named:"nav_back_leftArrow")?.withRenderingMode(.alwaysOriginal)
             
-            leftBarButtonItem.image = UIImage(named:"nav_back_leftArrow")?.withRenderingMode(.alwaysOriginal)
+            let leftBarButtonItem = UIButton(frame:CGRect(x: 0, y: 0, width: 10*kHeightScale, height: 20*kHeightScale))
+            leftBarButtonItem.setImage(UIImage(named:"nav_back_leftArrow")?.withRenderingMode(.alwaysOriginal), for: .normal)
+            leftBarButtonItem.addTarget(self, action: #selector(leftBarButtonItemAction), for: .touchUpInside)
+
         
-            viewController.navigationItem.leftBarButtonItem = leftBarButtonItem
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBarButtonItem)
         }
         
     }

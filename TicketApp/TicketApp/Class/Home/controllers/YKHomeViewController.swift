@@ -66,11 +66,11 @@ class YKHomeViewController: YKBaseViewController,UITableViewDelegate,UITableView
          MJRefreshNormalFooter() 会恢复原位
  */
 //        let fooder = MJRefreshBackNormalFooter()
-        let footer = MJRefreshBackNormalFooter()
+//        let footer = MJRefreshBackNormalFooter()
         header.setRefreshingTarget(self, refreshingAction: #selector(YKHomeViewController.refreshData))
-        footer.setRefreshingTarget(self, refreshingAction: #selector(YKHomeViewController.loadMore))
+//        footer.setRefreshingTarget(self, refreshingAction: #selector(YKHomeViewController.loadMore))
         tableView.mj_header = header
-        tableView.mj_footer = footer
+//        tableView.mj_footer = footer
         
         
     }

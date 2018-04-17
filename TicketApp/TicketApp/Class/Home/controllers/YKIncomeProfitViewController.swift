@@ -53,11 +53,14 @@ class YKIncomeProfitViewController: YKBaseViewController,UITableViewDataSource,U
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = YKRecordViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     //    MARK:记录点击事件
     @objc fileprivate func rightItemAction(){
         YKLog(message: "记录点击事件")
-        
+        let vc = YKRecordViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     //    MARK:加载数据
     fileprivate func loadData(){

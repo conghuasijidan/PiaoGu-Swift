@@ -8,10 +8,11 @@
 
 import UIKit
 
-class YKMeInfoViewController: YKBaseViewController,UITableViewDelegate,UITableViewDataSource {
+class YKMeInfoViewController: YKBaseViewController,UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     private var tableView:UITableView?
     private let infoCell = "infoCell"
+    private var avatarImage = UIImage(named:"home_infor_placehoder")
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "个人信息"
@@ -38,9 +39,12 @@ class YKMeInfoViewController: YKBaseViewController,UITableViewDelegate,UITableVi
         tableView.register(YKInfoTableViewCell.self, forCellReuseIdentifier: infoCell)
         tableView.rowHeight = 50*kHeightScale
         tableView.separatorStyle = .none
+//        关闭iOS11 下的self-sizing 
+//        tableView.estimatedRowHeight = 0;
+//        tableView.estimatedSectionHeaderHeight = 0;
+//        tableView.estimatedSectionFooterHeight = 0;
         self.view.addSubview(tableView)
         self.tableView = tableView
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,7 +55,7 @@ class YKMeInfoViewController: YKBaseViewController,UITableViewDelegate,UITableVi
         switch indexPath.row {
         case 0:
             cell.name = "头像"
-            cell.avatarImage = UIImage(named:"home_infor_placehoder")
+            cell.avatarImage = avatarImage
             cell.desc = nil
             break
         case 1:
@@ -76,6 +80,83 @@ class YKMeInfoViewController: YKBaseViewController,UITableViewDelegate,UITableVi
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch indexPath.row {
+        case 0:
+           
+           let  alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+            
+            
+            
+            let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: { (action) in
+                self.dismiss(animated: true, completion: nil)
+            })
+            let cameraAction = UIAlertAction(title: "拍照", style: .default, handler: {[weak self] (action) in
+                self!.openCameraAction()
+            })
+            let pictureAction = UIAlertAction(title: "从手机相册中选择", style: .default, handler: {[weak self]  (action) in
+                self!.openAlbumAction()
+                
+            })
+            alertController.addAction(cancelAction)
+            alertController.addAction(cameraAction)
+            alertController.addAction(pictureAction)
+            self.present(alertController, animated: true, completion: nil)
+            
+            break
+        case 1:
+            YKLog(message: "昵称")
+            break
+        case 2:
+            YKLog(message: "签名")
+            break
+        default:
+            YKLog(message: "账户")
+            
+        }
+        
+    }
+    //    MARK:打开相机
+    func openCameraAction() {
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = UIImagePickerControllerSourceType.camera
+            picker.allowsEditing = true
+            self.present(picker, animated: true, completion: {
+                
+            })
+            
+        }else{
+            YKLog(message: "找不到相机")
+        }
+        
+    }
+    //    MARK:打开相册
+    func openAlbumAction() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            self.present(picker, animated: true, completion: {
+                
+            })
+            
+        }else{
+            YKLog(message: "读取相册失败")
+        }
+        
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        YKLog(message: info)
+//        取出info 中的UIImagePickerControllerOriginalImage 再转化为 UIimage
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        self.avatarImage = image
+        self.tableView?.reloadData()
+        self.dismiss(animated: true, completion: nil)
     }
    
 

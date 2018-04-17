@@ -63,6 +63,7 @@ class YKInfoTableViewCell: UITableViewCell {
         self.avatarImageView.snp.makeConstraints { (make) in
             make.centerY.equalTo(self.contentView)
             make.right.equalTo(self.rightArrow).offset(-15*kWidthScale)
+            make.size.equalTo(CGSize(width: 30*kHeightScale, height: 30*kHeightScale))
         }
         self.descLable.snp.makeConstraints { (make) in
             make.centerY.equalTo(self.contentView)
@@ -81,6 +82,8 @@ class YKInfoTableViewCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.image = UIImage.init(named: "home_infor_placehoder")
         imageView.isHidden = true
+        imageView.layer.cornerRadius = 15*kHeightScale
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     private lazy var nameLabel:UILabel = {

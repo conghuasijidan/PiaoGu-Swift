@@ -14,7 +14,7 @@ class YKInvestProfitViewController: YKBaseViewController,UITableViewDataSource,U
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "投资宝收益"
-        let rightButton:UIButton = UIButton()
+        let rightButton:UIButton = UIButton(frame:CGRect(x: 0, y: 0, width: 30*kHeightScale, height: 30*kHeightScale))
         rightButton.setTitle("记录", for: .normal)
         rightButton.titleLabel?.font = UIFont.systemFont(ofSize: 14*kHeightScale)
         rightButton.addTarget(self, action: #selector(rightItemAction), for: .touchUpInside)
@@ -53,11 +53,18 @@ class YKInvestProfitViewController: YKBaseViewController,UITableViewDataSource,U
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 跳转产品详情
+        let vc = YKMarketDetailViewController()
+        
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     //    MARK:记录点击事件
    @objc fileprivate func rightItemAction(){
         YKLog(message: "记录点击事件")
+    
+        let vc = YKRecordViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    
         
     }
     //    MARK:加载数据
