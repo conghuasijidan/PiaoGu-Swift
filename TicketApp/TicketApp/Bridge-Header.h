@@ -10,7 +10,6 @@
 #define Bridge_Header_h
 
 #import "SDCycleScrollView.h"
-#import "PYPhotoBrowser.h"
 #import "SDPhotoBrowser.h"
 
 #endif /* Bridge_Header_h */

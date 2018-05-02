@@ -35,6 +35,7 @@
 		F47A5286208593190021DA1E /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = F47A5280208593190021DA1E /* SDPhotoBrowser.m */; };
 		F47A5287208593190021DA1E /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F47A5281208593190021DA1E /* SDWaitingView.m */; };
 		F47A5288208593190021DA1E /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F47A5282208593190021DA1E /* SDBrowserImageView.m */; };
+		F47A528A2085A31C0021DA1E /* YKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A52892085A31C0021DA1E /* YKUser.swift */; };
 		F483E66F206C9CBF00213215 /* YKMarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483E66E206C9CBF00213215 /* YKMarketTableViewCell.swift */; };
 		F483E671206CD99100213215 /* YKMarketModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483E670206CD99100213215 /* YKMarketModel2.swift */; };
 		F483E672206CDD5E00213215 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F483E673206CDD5E00213215 /* SVProgressHUD.framework */; };
@@ -153,6 +154,7 @@
 		F47A5283208593190021DA1E /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
 		F47A5284208593190021DA1E /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
 		F47A5285208593190021DA1E /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
+		F47A52892085A31C0021DA1E /* YKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKUser.swift; sourceTree = "<group>"; };
 		F483E66E206C9CBF00213215 /* YKMarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMarketTableViewCell.swift; sourceTree = "<group>"; };
 		F483E670206CD99100213215 /* YKMarketModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMarketModel2.swift; sourceTree = "<group>"; };
 		F483E673206CDD5E00213215 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,6 +357,7 @@
 				F42B975E1FF380BC00EB765B /* YKTabBarController.swift */,
 				F42B97601FF380E900EB765B /* YKNavigationViewController.swift */,
 				F451E56B2071FD7800F5F3CA /* YKBaseViewController.swift */,
+				F47A52892085A31C0021DA1E /* YKUser.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -905,6 +908,7 @@
 				F4C252431FF4E86B008485D2 /* YKHomeViewController.swift in Sources */,
 				F4C252C01FFDC48D008485D2 /* SDCycleScrollView.m in Sources */,
 				F4C252531FFB66B5008485D2 /* YKHomeProfitTableViewCell.swift in Sources */,
+				F47A528A2085A31C0021DA1E /* YKUser.swift in Sources */,
 				F47A5286208593190021DA1E /* SDPhotoBrowser.m in Sources */,
 				F4C252BC1FFDC48D008485D2 /* TAAnimatedDotView.m in Sources */,
 				F483E67E206E2A8B00213215 /* YKMeBalanceViewController.swift in Sources */,

@@ -12,6 +12,16 @@ import UIKit
 class YKMeSecOneTableViewCell: UITableViewCell {
 
     var avatarCallBack:CallBack?
+    var model:YKUser?{
+        didSet{
+            guard let user = model else {
+                return
+            }
+            self.avatarImageView.image = user.avatarImage
+            self.nameLabel.text = user.userName
+            self.idLabel.text = user.userID
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,6 +46,7 @@ class YKMeSecOneTableViewCell: UITableViewCell {
         self.avatarImageView.snp.makeConstraints { (make) in
             make.left.equalTo(self.contentView).offset(10*kWidthScale)
             make.centerY.equalTo(self.contentView).offset(-6*kHeightScale)
+            make.size.equalTo(CGSize(width: 60*kHeightScale, height: 60*kHeightScale))
 //            make.top.equalTo(self.contentView).offset(20*kHeightScale)
         }
         self.nameLabel.snp.makeConstraints { (make) in
@@ -72,18 +83,20 @@ class YKMeSecOneTableViewCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.image = UIImage(named:"me_name_placehoder")
         imageView.isUserInteractionEnabled = true
+        imageView.layer.cornerRadius = 30*kHeightScale
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     private lazy var nameLabel:UILabel = {
         let label = UILabel()
-        label.text = "葱花思鸡蛋"
+        label.text = "昵称"
         label.font = UIFont.systemFont(ofSize: 18*kHeightScale)
         label.textColor = UIColor.yk_colorWithHex(hex: 0x333333)
         return label
     }()
     private lazy var idLabel:UILabel = {
         let label = UILabel()
-        label.text = "账号：19202938"
+        label.text = "账号：12121212"
         label.font = UIFont.systemFont(ofSize: 12*kHeightScale)
         label.textColor = UIColor.yk_colorWithHex(hex: 0x333333)
         return label

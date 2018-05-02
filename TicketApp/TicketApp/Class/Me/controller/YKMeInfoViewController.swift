@@ -13,11 +13,12 @@ class YKMeInfoViewController: YKBaseViewController,UITableViewDelegate,UITableVi
     private var tableView:UITableView?
     private let infoCell = "infoCell"
     private var avatarImage = UIImage(named:"home_infor_placehoder")
+    private var userModel:YKUser?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "个人信息"
         self.view.backgroundColor = UIColor.white
-        
+        loadData()
         setupUI()
     }
 
@@ -27,6 +28,8 @@ class YKMeInfoViewController: YKBaseViewController,UITableViewDelegate,UITableVi
     }
     
     fileprivate func loadData(){
+//        从本地内存中取出用户信息
+        userModel = YKUser(dict:nil).getUserInfo()
         
         
     }
@@ -55,13 +58,13 @@ class YKMeInfoViewController: YKBaseViewController,UITableViewDelegate,UITableVi
         switch indexPath.row {
         case 0:
             cell.name = "头像"
-            cell.avatarImage = avatarImage
+            cell.avatarImage = userModel?.avatarImage
             cell.desc = nil
             break
         case 1:
             cell.name = "昵称"
             cell.avatarImage = nil
-            cell.desc = "未设置"
+            cell.desc = userModel?.userName
             break
         case 2:
             cell.name = "签名"
@@ -141,9 +144,7 @@ class YKMeInfoViewController: YKBaseViewController,UITableViewDelegate,UITableVi
             let picker = UIImagePickerController()
             picker.delegate = self
             picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
-            self.present(picker, animated: true, completion: {
-                
-            })
+            self.present(picker, animated: true, completion: nil)
             
         }else{
             YKLog(message: "读取相册失败")
@@ -154,7 +155,14 @@ class YKMeInfoViewController: YKBaseViewController,UITableViewDelegate,UITableVi
         YKLog(message: info)
 //        取出info 中的UIImagePickerControllerOriginalImage 再转化为 UIimage
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        self.avatarImage = image
+//        存储本地
+//       修改本地头像
+         userModel?.avatarImage = image
+//        修改后头像保存在本地
+         userModel?.saveUserInfo(user: userModel!)
+//        修改后头像保存到服务器（待实现）
+        
+//        self.avatarImage = image
         self.tableView?.reloadData()
         self.dismiss(animated: true, completion: nil)
     }

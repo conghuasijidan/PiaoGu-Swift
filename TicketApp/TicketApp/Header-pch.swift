@@ -24,7 +24,7 @@ let qiniu = "http://ovc3poav6.bkt.clouddn.com/"
 
 typealias CallBack = ()->Void
 typealias StringCallBack = (_ paramater:String)->Void
-
+typealias Task = (_ cancel : Bool) -> Void
 //MARK:全局颜色
 
 
@@ -56,4 +56,41 @@ func is_IOS11() -> Bool { return (UIDevice.current.systemVersion as NSString).do
 
 //是否: IOS 9以上
 func is_IOS9() -> Bool { return (UIDevice.current.systemVersion as NSString).doubleValue >= 9.0 }
+
+// 延时封装
+func delay(_ time: TimeInterval, task: @escaping ()->()) ->  Task? {
+    
+    func dispatch_later(block: @escaping ()->()) {
+        let t = DispatchTime.now() + time
+        DispatchQueue.main.asyncAfter(deadline: t, execute: block)
+    }
+    var closure: (()->Void)? = task
+    var result: Task?
+    
+    let delayedClosure: Task = {
+        cancel in
+        if let internalClosure = closure {
+            if (cancel == false) {
+                DispatchQueue.main.async(execute: internalClosure)
+            }
+        }
+        closure = nil
+        result = nil
+    }
+    
+    result = delayedClosure
+    
+    dispatch_later {
+        if let delayedClosure = result {
+            delayedClosure(false)
+        }
+    }
+    return result
+}
+func cancel(_ task: Task?) {
+    task?(true)
+}
+
+
+
 

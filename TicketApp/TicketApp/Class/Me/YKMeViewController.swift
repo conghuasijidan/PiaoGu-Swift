@@ -8,18 +8,19 @@
 
 import UIKit
 import MWPhotoBrowser
-
+import SVProgressHUD
 class YKMeViewController: YKBaseViewController,UITableViewDelegate,UITableViewDataSource,MWPhotoBrowserDelegate,SDPhotoBrowserDelegate {
 
     private var tableView:UITableView?
     private let sectionOneCell = "scetionOneCell"
     private let sectionTwoCell = "scetionTwoCell"
     private var photoList = [UIImage]()
+    private var userModel:YKUser?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.title = "我的"
-        loadData()
+       
         setupUI()
 //        mw 图片浏览器
 //        let photo = MWPhoto(image: UIImage(named:"me_name_placehoder"))!
@@ -30,7 +31,10 @@ class YKMeViewController: YKBaseViewController,UITableViewDelegate,UITableViewDa
         
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         loadData()
+    }
 
     fileprivate func setupUI(){
         let tableView = UITableView(frame:CGRect(x:0,y:0,width:kScreenWidth,height:viewHeight), style: .plain)
@@ -95,6 +99,7 @@ class YKMeViewController: YKBaseViewController,UITableViewDelegate,UITableViewDa
                 
 
             }
+            cell.model = userModel
             return cell
         default:
             let cell:YKMeSecTwoTableViewCell = tableView.dequeueReusableCell(withIdentifier:sectionTwoCell, for: indexPath) as! YKMeSecTwoTableViewCell
@@ -164,10 +169,7 @@ class YKMeViewController: YKBaseViewController,UITableViewDelegate,UITableViewDa
         
         
     }
-    fileprivate func loadData(){
-       
-        
-    }
+    
     //MARK: 实现photoBrower 的代理方法
     
 //    如果有高质量图片的话实现此方法
@@ -189,12 +191,46 @@ class YKMeViewController: YKBaseViewController,UITableViewDelegate,UITableViewDa
         
     }
     
+    @objc var userID:String?
+    @objc var userName:String?
+    @objc var avatarImage:UIImage?
+    //    MARK:加载数据
+    fileprivate func loadData(){
+        
+        var dict:[String:AnyObject] = [String:AnyObject]()
+        dict["accessToken"] = nil
+        dict["userName"] = "葱花思鸡蛋" as AnyObject
+        dict["userID"] = "账号：19920807" as AnyObject
+        dict["avatarImage"] = UIImage(named:"me_name_placehoder")
+        SVProgressHUD.show()
+        
+       
+        
+//        存储本地
+         weak var weakSelf = self
+        
+//        没有本地数据的话，请求网络数据
+        if YKUser(dict:nil).islogin() {
+            userModel = YKUser(dict:nil).getUserInfo()
+            self.tableView?.reloadData()
+            SVProgressHUD.dismiss()
+            
+        }else{
+            delay(1) {
+            weakSelf!.userModel = YKUser(dict: dict)
+            weakSelf!.userModel?.saveUserInfo(user:weakSelf!.userModel!)
+            weakSelf!.tableView?.reloadData()
+            SVProgressHUD.dismiss()
+        }
+        
+      }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
+   
+   
 
 }
