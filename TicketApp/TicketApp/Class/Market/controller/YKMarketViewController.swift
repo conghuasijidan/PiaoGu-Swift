@@ -31,21 +31,32 @@ class YKMarketViewController: YKBaseViewController,UITableViewDelegate,UITableVi
     }
 
     fileprivate func loadData(){
-        YKNetWorkData.shareInstance.getPromotion(success: { (resonse) in
-            self.headerView?.imgUrl = resonse
+        
+//        YKNetWorkData.shareInstance.getPromotion(success: { (resonse) in
+//            self.headerView?.imgUrl = resonse
+//
+//
+//        })
+        YKNetWorkData.shareInstance.getPromotion(success: { (response) in
+            self.headerView?.imgUrl = response
+        }) { (response) in
             
-            let arr =
-                [["name":"新白鹿","desc":"杭州知名中餐连锁餐厅，成立于1998年，广受长三角人民喜爱和好评，我们都喜欢，大家好才是真的好。"],["name":"新白鹿","desc":"杭州知名中餐连锁餐厅，成立于1998年，广受长三角人民喜爱和好评"],["name":"新白鹿","desc":"杭州知名中餐连锁餐厅，成立于1998年"],["name":"新白鹿","desc":"杭州知名中餐连锁餐厅，成立于1998年，广受长三角人民喜爱和好评，我们都喜欢，大家好才是真的好。"],["name":"新白鹿","desc":"杭州知名中餐连锁餐厅，成立于1998年，广受长三角人民喜爱和好评，我们都喜欢，大家好才是真的好。"],]
-            var arrM = [YKMarketModel2]()
-            for value in arr{
-                let model:YKMarketModel2 = YKMarketModel2(dict:value)
-                arrM.append(model)
+            if response == nil
+            {
+                self.headerView?.imgUrl = nil
             }
-            self.modelList = arrM
-            self.tableView?.reloadData()
-        })
+            
+        }
         
-        
+        let arr =
+            [["name":"新白鹿","desc":"杭州知名中餐连锁餐厅，成立于1998年，广受长三角人民喜爱和好评，我们都喜欢，大家好才是真的好。"],["name":"新白鹿","desc":"杭州知名中餐连锁餐厅，成立于1998年，广受长三角人民喜爱和好评"],["name":"新白鹿","desc":"杭州知名中餐连锁餐厅，成立于1998年"],["name":"新白鹿","desc":"杭州知名中餐连锁餐厅，成立于1998年，广受长三角人民喜爱和好评，我们都喜欢，大家好才是真的好。"],["name":"新白鹿","desc":"杭州知名中餐连锁餐厅，成立于1998年，广受长三角人民喜爱和好评，我们都喜欢，大家好才是真的好。"],]
+        var arrM = [YKMarketModel2]()
+        for value in arr{
+            let model:YKMarketModel2 = YKMarketModel2(dict:value)
+            arrM.append(model)
+        }
+        self.modelList = arrM
+        self.tableView?.reloadData()
         
         
     }

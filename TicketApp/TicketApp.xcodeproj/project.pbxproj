@@ -32,6 +32,9 @@
 		F451E57020721C2E00F5F3CA /* YKMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451E56F20721C2E00F5F3CA /* YKMessageTableViewCell.swift */; };
 		F45FCE002079B22E0026A6B8 /* YKMarketInvestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45FCDFF2079B22E0026A6B8 /* YKMarketInvestViewController.swift */; };
 		F45FCE022079B2430026A6B8 /* YKMarketIncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45FCE012079B2430026A6B8 /* YKMarketIncomeViewController.swift */; };
+		F4662CE220B3AE21006B8480 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4662CDE20B3AE20006B8480 /* YYWeakProxy.m */; };
+		F4662CE320B3AE21006B8480 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4662CE020B3AE20006B8480 /* YYFPSLabel.m */; };
+		F4662CE820B3EBDB006B8480 /* YKCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4662CE720B3EBDB006B8480 /* YKCommentModel.swift */; };
 		F47A5286208593190021DA1E /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = F47A5280208593190021DA1E /* SDPhotoBrowser.m */; };
 		F47A5287208593190021DA1E /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F47A5281208593190021DA1E /* SDWaitingView.m */; };
 		F47A5288208593190021DA1E /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F47A5282208593190021DA1E /* SDBrowserImageView.m */; };
@@ -118,6 +121,8 @@
 		F41852062068BEF900BFF2A3 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F41852082068BF0400BFF2A3 /* pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F41852092068E89400BFF2A3 /* YKNetWorkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKNetWorkData.swift; sourceTree = "<group>"; };
+		F42137FE20A17CDE0011E765 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		F42137FF20A17CDE0011E765 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		F42B97261FF37F9A00EB765B /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42B97291FF37F9A00EB765B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F42B972E1FF37F9A00EB765B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,6 +151,11 @@
 		F451E56F20721C2E00F5F3CA /* YKMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMessageTableViewCell.swift; sourceTree = "<group>"; };
 		F45FCDFF2079B22E0026A6B8 /* YKMarketInvestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMarketInvestViewController.swift; sourceTree = "<group>"; };
 		F45FCE012079B2430026A6B8 /* YKMarketIncomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMarketIncomeViewController.swift; sourceTree = "<group>"; };
+		F4662CDE20B3AE20006B8480 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		F4662CDF20B3AE20006B8480 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		F4662CE020B3AE20006B8480 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		F4662CE120B3AE20006B8480 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		F4662CE720B3EBDB006B8480 /* YKCommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKCommentModel.swift; sourceTree = "<group>"; };
 		F47A527D208590740021DA1E /* SDPhotoBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDPhotoBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47A527F208593190021DA1E /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
 		F47A5280208593190021DA1E /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
@@ -365,6 +375,7 @@
 		F42B975D1FF3804000EB765B /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F4662CDD20B3AE20006B8480 /* YYFPSLabel */,
 				F47A527E208593190021DA1E /* SDPhotoBrowser */,
 				F4C252D91FFF2D89008485D2 /* NetWorkTool */,
 				F4C252AB1FFDC48D008485D2 /* SDCycleScrollView */,
@@ -401,6 +412,17 @@
 				F483E676206E067D00213215 /* view */,
 			);
 			path = Me;
+			sourceTree = "<group>";
+		};
+		F4662CDD20B3AE20006B8480 /* YYFPSLabel */ = {
+			isa = PBXGroup;
+			children = (
+				F4662CDE20B3AE20006B8480 /* YYWeakProxy.m */,
+				F4662CDF20B3AE20006B8480 /* YYFPSLabel.h */,
+				F4662CE020B3AE20006B8480 /* YYFPSLabel.m */,
+				F4662CE120B3AE20006B8480 /* YYWeakProxy.h */,
+			);
+			path = YYFPSLabel;
 			sourceTree = "<group>";
 		};
 		F47A527E208593190021DA1E /* SDPhotoBrowser */ = {
@@ -540,6 +562,7 @@
 			children = (
 				F4C252D71FFE22B4008485D2 /* YKMarketModel.swift */,
 				F483E670206CD99100213215 /* YKMarketModel2.swift */,
+				F4662CE720B3EBDB006B8480 /* YKCommentModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -643,7 +666,7 @@
 				TargetAttributes = {
 					F42B97251FF37F9A00EB765B = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 9TDA7J4V7G;
+						DevelopmentTeam = DHBXPM53W4;
 						ProvisioningStyle = Automatic;
 					};
 					F42B973C1FF37F9A00EB765B = {
@@ -914,6 +937,7 @@
 				F483E67E206E2A8B00213215 /* YKMeBalanceViewController.swift in Sources */,
 				F4B2CEF3207CACDD00CEF361 /* YKRecordTableViewCell.swift in Sources */,
 				F4C252CE1FFDC4DD008485D2 /* UIView+Extension.swift in Sources */,
+				F4662CE320B3AE21006B8480 /* YYFPSLabel.m in Sources */,
 				F483E66F206C9CBF00213215 /* YKMarketTableViewCell.swift in Sources */,
 				F4C252BB1FFDC48D008485D2 /* TAAbstractDotView.m in Sources */,
 				F483E682206E2AB100213215 /* YKMeKeFuViewController.swift in Sources */,
@@ -941,7 +965,9 @@
 				F42B97321FF37F9A00EB765B /* TicketApp.xcdatamodeld in Sources */,
 				F483E67A206E08E800213215 /* YKMeSecTwoTableViewCell.swift in Sources */,
 				F4B2CEE92079F45D00CEF361 /* YKMarketDetailTwoTableViewCell.swift in Sources */,
+				F4662CE820B3EBDB006B8480 /* YKCommentModel.swift in Sources */,
 				F4DA31A22074C45500C78A67 /* YKIncomeProfitViewController.swift in Sources */,
+				F4662CE220B3AE21006B8480 /* YYWeakProxy.m in Sources */,
 				F4DDA9E72069F27B001DFE00 /* YKMarketHeaderView.swift in Sources */,
 				F4C252BE1FFDC48D008485D2 /* TAPageControl.m in Sources */,
 				F4B2CEED207C8F7300CEF361 /* YKItemizeViewController.swift in Sources */,
@@ -985,6 +1011,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F42B972E1FF37F9A00EB765B /* Base */,
+				F42137FE20A17CDE0011E765 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -993,6 +1020,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F42B97361FF37F9A00EB765B /* Base */,
+				F42137FF20A17CDE0011E765 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1004,6 +1032,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1055,6 +1084,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1101,9 +1131,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = 9TDA7J4V7G;
+				DEVELOPMENT_TEAM = DHBXPM53W4;
 				INFOPLIST_FILE = TicketApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" ";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ubangwang.TicketApp;
@@ -1120,9 +1150,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = 9TDA7J4V7G;
+				DEVELOPMENT_TEAM = DHBXPM53W4;
 				INFOPLIST_FILE = TicketApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ubangwang.TicketApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

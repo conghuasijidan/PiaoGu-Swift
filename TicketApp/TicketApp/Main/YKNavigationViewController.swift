@@ -36,6 +36,7 @@ class YKNavigationViewController: UINavigationController,UINavigationControllerD
         //        设置通用返回按钮
         if self.viewControllers.count > 1 {
             
+//            注释掉的方法不可行
 //            let leftBarButtonItem = UIBarButtonItem(title:"", style: .plain, target: self, action: #selector(leftBarButtonItemAction))
 //            leftBarButtonItem.image = UIImage(named:"nav_back_leftArrow")?.withRenderingMode(.alwaysOriginal)
             

@@ -18,7 +18,7 @@ class YKNetWorkData: NSObject {
     static let shareInstance = YKNetWorkData()
     private override init() {}
     
-    func getPromotion(success:@escaping (_ response:[String])->()){
+    func getPromotion(success:@escaping (_ response:[String])->(),failure:@escaping (_ response:[String]?)->()){
 //       SVProgressHUD.setBackgroundColor(UIColor.clear)
         SVProgressHUD.setForegroundColor(UIColor.orange)
         SVProgressHUD.show()
@@ -45,10 +45,12 @@ class YKNetWorkData: NSObject {
                 
             }
             success(arrM)
+//            failure(nil)
             SVProgressHUD.dismiss()
         }) { (error) in
             YKLog(message: "请求失败")
             YKLog(message: error)
+            failure(nil)
             SVProgressHUD.dismiss()
         }
         

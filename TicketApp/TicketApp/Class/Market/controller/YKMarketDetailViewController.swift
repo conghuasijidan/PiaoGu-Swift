@@ -12,13 +12,23 @@ class YKMarketDetailViewController: YKBaseViewController,UITableViewDelegate,UIT
     private let ONECELLID  = "sectionOneID"
     private let TWOWCELLID = "sectionTwoID"
     private var tableView:UITableView?
-    
+    private var modelList:[YKCommentModel]? = [YKCommentModel]()
+    private var cellHeightCache:[String:NSNumber] = [String:NSNumber]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "产品详情"
         self.view.backgroundColor = UIColor.white
-        
+//        modelList = [nil]
+        loadData()
         setupUI()
+        
+    }
+    func loadData() {
+        let dictArr = [["content":"扛住了 柴米油盐的麻烦 扛住了 朋友聚会的调侃","id":"0"],["content":"扛住了 世俗生活的刁难 却扛不住 对你的喜欢 亦步亦趋随你至深不可测 患得患失唯恐你杳不可得 却只面不改色","id":"1"],["content":"为你我认了 一朝一夕使我已固不可彻 若即若离本应是罪不可赦 怎不忍心怪你 对我太独特 无时无刻","id":"2"],["content":"像是一首无法停止单曲循环的无名歌 扛住了 柴米油盐的麻烦 扛住了 朋友聚会的调侃 扛住了 世俗生活的刁难 却扛不住 对你的喜欢","id":"3"],["content":"躲过了 世界末日的灾难 明白了 生命是千金不换 躲过了 大悲狂喜的极端 却躲不过 对你的喜欢 亦步亦趋随你至深不可测 患得患失唯恐你杳不可得","id":"4"],["content":"扛住了 柴米油盐的麻烦 扛住了 朋友聚会的调侃","id":"5"],["content":"扛住了 世俗生活的刁难 却扛不住 对你的喜欢 亦步亦趋随你至深不可测 患得患失唯恐你杳不可得 却只面不改色","id":"6"],["content":"为你我认了 一朝一夕使我已固不可彻 若即若离本应是罪不可赦 怎不忍心怪你 对我太独特 无时无刻","id":"7"],["content":"像是一首无法停止单曲循环的无名歌 扛住了 柴米油盐的麻烦 扛住了 朋友聚会的调侃 扛住了 世俗生活的刁难 却扛不住 对你的喜欢","id":"8"],["content":"躲过了 世界末日的灾难 明白了 生命是千金不换 躲过了 大悲狂喜的极端 却躲不过 对你的喜欢 亦步亦趋随你至深不可测 患得患失唯恐你杳不可得","id":"9"],["content":"扛住了 柴米油盐的麻烦 扛住了 朋友聚会的调侃","id":"10"],["content":"扛住了 世俗生活的刁难 却扛不住 对你的喜欢 亦步亦趋随你至深不可测 患得患失唯恐你杳不可得 却只面不改色","id":"11"],["content":"为你我认了 一朝一夕使我已固不可彻 若即若离本应是罪不可赦 怎不忍心怪你 对我太独特 无时无刻","id":"12"],["content":"像是一首无法停止单曲循环的无名歌 扛住了 柴米油盐的麻烦 扛住了 朋友聚会的调侃 扛住了 世俗生活的刁难 却扛不住 对你的喜欢","id":"13"],["content":"躲过了 世界末日的灾难 明白了 生命是千金不换 躲过了 大悲狂喜的极端 却躲不过 对你的喜欢 亦步亦趋随你至深不可测 患得患失唯恐你杳不可得","id":"14"],["content":"扛住了 柴米油盐的麻烦 扛住了 朋友聚会的调侃","id":"15"],["content":"扛住了 世俗生活的刁难 却扛不住 对你的喜欢 亦步亦趋随你至深不可测 患得患失唯恐你杳不可得 却只面不改色","id":"16"],["content":"为你我认了 一朝一夕使我已固不可彻 若即若离本应是罪不可赦 怎不忍心怪你 对我太独特 无时无刻","id":"17"],["content":"像是一首无法停止单曲循环的无名歌 扛住了 柴米油盐的麻烦 扛住了 朋友聚会的调侃 扛住了 世俗生活的刁难 却扛不住 对你的喜欢","id":"18"],["content":"躲过了 世界末日的灾难 明白了 生命是千金不换 躲过了 大悲狂喜的极端 却躲不过 对你的喜欢 亦步亦趋随你至深不可测 患得患失唯恐你杳不可得","id":"19"]]
+        for dict in dictArr {
+            let model = YKCommentModel(dict: dict)
+            modelList?.append(model)
+        }
     }
     
     fileprivate func setupUI(){
@@ -31,7 +41,7 @@ class YKMarketDetailViewController: YKBaseViewController,UITableViewDelegate,UIT
         tableView.register(YKMarketDetailOneTableViewCell.self, forCellReuseIdentifier: ONECELLID)
         tableView.register(YKMarketDetailTwoTableViewCell.self, forCellReuseIdentifier: TWOWCELLID)
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 100
+        tableView.estimatedRowHeight = 130
         tableView.separatorStyle = .none
         self.view.addSubview(tableView)
         self.tableView = tableView
@@ -98,7 +108,7 @@ class YKMarketDetailViewController: YKBaseViewController,UITableViewDelegate,UIT
         case 0:
             return 1
         default:
-            return 10
+            return modelList?.count ?? 0
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -112,9 +122,53 @@ class YKMarketDetailViewController: YKBaseViewController,UITableViewDelegate,UIT
             let cell:YKMarketDetailTwoTableViewCell =
                 tableView.dequeueReusableCell(withIdentifier: TWOWCELLID, for: indexPath) as! YKMarketDetailTwoTableViewCell
              cell.selectionStyle = .none
+            if let list = modelList {
+                cell.model = list[indexPath.row]
+            }
             return cell
         }
     }
+    //    MARK: 行高缓存 除非缓存到本地，不然没效果
+    
+//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+////     判断行高是否缓存  从缓存中取出行高
+//        if indexPath.section == 0 {
+//            return 489
+//        }
+//
+//        if let list = modelList {
+//            let model:YKCommentModel = list[indexPath.row]
+//            guard let id = model.id else{
+//                return 130
+//            }
+//            let cellHeight = cellHeightCache[id]
+////            没有缓存的高度
+//            guard let height = cellHeight else{
+//                return 130
+//            }
+////            缓存的高度
+//            return CGFloat(height.floatValue)
+//        }
+//
+//       return 130
+//    }
+//
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        if indexPath.section == 0 {
+//            return
+//        }
+//        let height = Float(cell.frame.size.height)
+//        let cellheight = NSNumber(value: height)
+//        YKLog(message: height)
+//        if let list = modelList {
+//            let model:YKCommentModel = list[indexPath.row]
+//            //        高度缓存
+//            cellHeightCache.updateValue(cellheight, forKey: model.id!)
+//        }
+//
+//    }
+    
+    
     //   MARK: 评论点击事件
    @objc private func commentButtonAction(){
         YKLog(message: "评论点击事件")

@@ -6,16 +6,26 @@
 //  Copyright © 2018年 hangzhouzhulongkeji. All rights reserved.
 //
 
+
 import UIKit
 
 class YKBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       fpsTest()
+    }
+    
+    // 检测FPS
+    func fpsTest(){
+       let fpsLabel:YYFPSLabel = YYFPSLabel()
+        fpsLabel.frame = CGRect(x: self.view.center.x-25, y: self.view.center.y, width: 50, height: 30)
+        fpsLabel.sizeToFit()
+        let window = UIApplication.shared.keyWindow
+        window?.addSubview(fpsLabel)
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -30,6 +40,9 @@ class YKBaseViewController: UIViewController {
             self.tabBarController?.tabBar.isHidden = false
         }
     }
-   
+    //    相当于OC的dealloc 方法
+    deinit{
+        YKLog(message: "我被销毁了")
+    }
 
 }

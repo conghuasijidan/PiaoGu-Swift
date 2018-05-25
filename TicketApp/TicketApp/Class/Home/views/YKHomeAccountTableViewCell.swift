@@ -11,6 +11,7 @@ import UIKit
 class YKHomeAccountTableViewCell: UITableViewCell {
     
     var showDetailCallBack:CallBack?
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()

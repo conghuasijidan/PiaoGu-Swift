@@ -7,7 +7,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>允许使用相机权限</string>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<string>zh_CN</string>
 	<key>CFBundleDisplayName</key>
 	<string>票谷网-swift</string>
 	<key>CFBundleExecutable</key>

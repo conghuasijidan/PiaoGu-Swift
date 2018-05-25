@@ -10,6 +10,12 @@ import UIKit
 
 class YKMarketDetailTwoTableViewCell: UITableViewCell {
 
+    var model:YKCommentModel?{
+        didSet{
+            infoLabel.text = model?.content
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -71,6 +77,7 @@ class YKMarketDetailTwoTableViewCell: UITableViewCell {
             make.top.equalTo(self.replyButton.snp.bottom).offset(10*kHeightScale)
             make.left.right.equalTo(self.contentView)
             make.height.equalTo(1*kHeightScale)
+//            设置动态行高约束
             make.bottom.equalTo(self.contentView)
         }
         self.countLabel.snp.makeConstraints { (make) in

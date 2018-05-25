@@ -57,6 +57,10 @@ class YKInvestProfitTableViewCell: UITableViewCell {
             make.right.equalTo(self.contentView).offset(-15*kWidthScale)
             make.bottom.equalTo(self.ImgView)
         }
+//        栅格化
+        self.layer.shouldRasterize = true
+        self.layer.rasterizationScale = UIScreen.main.scale
+        
     }
     private lazy var ImgView:UIImageView = {
         let imageView = UIImageView()

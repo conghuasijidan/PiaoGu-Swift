@@ -11,5 +11,5 @@
 
 #import "SDCycleScrollView.h"
 #import "SDPhotoBrowser.h"
-
+#import "YYFPSLabel.h"
 #endif /* Bridge_Header_h */

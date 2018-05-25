@@ -20,7 +20,7 @@ class YKMarketInvestViewController: YKBaseViewController,UITableViewDataSource,U
     }
     
     fileprivate func setupUI(){
-        
+//        let height = result ? (viewHeight - 34):viewHeight;
         let tableView:UITableView = UITableView(frame: CGRect(x:0,y:0,width:kScreenWidth,height:viewHeight), style: .plain)
         tableView.dataSource = self
         tableView.delegate = self

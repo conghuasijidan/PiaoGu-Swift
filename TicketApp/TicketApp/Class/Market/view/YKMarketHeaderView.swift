@@ -16,7 +16,13 @@ class YKMarketHeaderView: UIView,SDCycleScrollViewDelegate {
     private let INCOMEID = "income"
     var imgUrl:[String]?{
         didSet{
-            self.cycleView?.imageURLStringsGroup = imgUrl
+            if imgUrl != nil {
+                self.cycleView?.imageURLStringsGroup = imgUrl
+            }else{
+                self.cycleView?.localizationImageNamesGroup = ["market_advertisement_placeholder","market_advertisement_placeholder"]
+            }
+            
+            
         }
     }
     private lazy var investBtn:UIButton = {

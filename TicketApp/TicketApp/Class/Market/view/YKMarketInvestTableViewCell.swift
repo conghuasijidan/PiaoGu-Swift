@@ -30,6 +30,7 @@ class YKMarketInvestTableViewCell: UITableViewCell {
         self.ImgView.snp.makeConstraints { (make) in
             make.left.equalTo(self.contentView).offset(10*kWidthScale)
             make.centerY.equalTo(self.contentView)
+            make.size.equalTo(CGSize(width: 175, height: 96))
         }
         self.lineView.snp.makeConstraints { (make) in
             make.left.right.bottom.equalTo(self.contentView)

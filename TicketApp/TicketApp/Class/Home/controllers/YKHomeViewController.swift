@@ -17,6 +17,7 @@ class YKHomeViewController: YKBaseViewController,UITableViewDelegate,UITableView
     private let profitCellID = "homeProfitCellID"
     
     private var tableView:UITableView? = nil
+    private var userModel:YKUser?
     
     override func viewSafeAreaInsetsDidChange() {
         //        YKLog(message: "安全区域")
@@ -31,7 +32,26 @@ class YKHomeViewController: YKBaseViewController,UITableViewDelegate,UITableView
         self.setupUI()
         
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+//        weak var weakSelf = self
+        //没有本地数据的话，请求网络数据
+        if YKUser(dict:nil).islogin() {
+            userModel = YKUser(dict:nil).getUserInfo()
+            self.tableView?.reloadData()
+            SVProgressHUD.dismiss()
+            
+        }else{
+            //            请求网络数据
+            //            delay(1) {
+            //                weakSelf!.userModel = YKUser(dict: dict)
+            //                weakSelf!.userModel?.saveUserInfo(user:weakSelf!.userModel!)
+            //                weakSelf!.tableView?.reloadData()
+            //                SVProgressHUD.dismiss()
+            //
+            //            }
+        }
+    }
     
     
     fileprivate  func setupUI(){
@@ -86,7 +106,7 @@ class YKHomeViewController: YKBaseViewController,UITableViewDelegate,UITableView
         if indexPath.row == 0 {
             
             let cell:YKHomeUserTableViewCell = tableView.dequeueReusableCell(withIdentifier: userCellID, for: indexPath) as! YKHomeUserTableViewCell
-            
+                cell.model = userModel
             cell.messageCallBack = {
                 
                 let vc = YKMeMessageViewController()

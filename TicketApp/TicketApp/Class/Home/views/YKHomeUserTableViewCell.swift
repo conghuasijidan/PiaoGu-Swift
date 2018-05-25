@@ -11,6 +11,12 @@ import UIKit
 class YKHomeUserTableViewCell: UITableViewCell {
 
     var messageCallBack:CallBack?
+    var model:YKUser?{
+        didSet{
+            self.avatarImageView.image = model?.avatarImage
+            self.nameLabel.text = model?.userName
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,6 +50,7 @@ class YKHomeUserTableViewCell: UITableViewCell {
         avatarImageView.snp.makeConstraints { (make) in
             make.centerY.equalTo(self.contentView)
             make.left.equalTo(self.contentView).offset(20*kWidthScale)
+            make.size.equalTo(CGSize(width:30*kHeightScale,height:30*kHeightScale))
         }
         nameLabel.snp.makeConstraints { (make) in
             make.centerY.equalTo(self.contentView)
@@ -64,7 +71,12 @@ class YKHomeUserTableViewCell: UITableViewCell {
     }
 
     private lazy var bgImageView = UIImageView(image:UIImage(named:"home_user_bg"))
-    private lazy var avatarImageView = UIImageView(image:UIImage(named:"home_user_icon_placehoder"))
+    private lazy var avatarImageView = { () -> UIImageView in
+        let imageView = UIImageView(image:UIImage(named:"home_user_icon_placehoder"))
+            imageView.layer.cornerRadius = 15*kHeightScale
+            imageView.layer.masksToBounds = true
+        return imageView
+    }()
     private lazy var nameLabel = UILabel.yk_createLabel(text: "葱花思鸡蛋", textColor: 0xffffff, fontSize: 14*kHeightScale)
     
     private lazy var messageButton:UIButton = {
