@@ -120,13 +120,13 @@ class YKTopUpViewController: YKBaseViewController,UITextFieldDelegate {
         }
         
         
-        guard let num = Int(str) else{
-            return
-        }
-        if num > 100000 {
-            SVProgressHUD.showInfo(withStatus: "超出最大提现金额")
-            self.cashTextField.text = (str as NSString).substring(to: 5)
-        }
+//        guard let num = Int(str) else{
+//            return
+//        }
+//        if num > 100000 {
+//            SVProgressHUD.showInfo(withStatus: "超出最大提现金额")
+//            self.cashTextField.text = (str as NSString).substring(to: 5)
+//        }
         
         
     }

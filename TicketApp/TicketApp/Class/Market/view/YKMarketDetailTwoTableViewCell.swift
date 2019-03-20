@@ -85,7 +85,7 @@ class YKMarketDetailTwoTableViewCell: UITableViewCell {
             make.centerY.equalTo(self.praiseButton)
         }
         
-        
+       
         
     }
     @objc private func praiseButtonAction(){
@@ -147,3 +147,7 @@ class YKMarketDetailTwoTableViewCell: UITableViewCell {
     
     
 }
+
+
+
+

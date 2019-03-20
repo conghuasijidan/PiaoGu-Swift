@@ -26,6 +26,8 @@ class YKHomeViewController: YKBaseViewController,UITableViewDelegate,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        YKLog(message: kHeightScale)
+        
         self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
         self.loadData()
@@ -55,7 +57,7 @@ class YKHomeViewController: YKBaseViewController,UITableViewDelegate,UITableView
     
     
     fileprivate  func setupUI(){
-        
+        YKLog(message: viewHeight);
         let tableView = UITableView(frame: CGRect(x:0,y:0,width:kScreenWidth,height:viewHeight), style: .plain)
         
         tableView.delegate = self
